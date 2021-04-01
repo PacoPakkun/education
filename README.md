@@ -1,4 +1,7 @@
 # UBB
+
+My work as a computer science student @Babes Bolyai University of Cluj-Napoca
+
 <ul>
   <li>:open_file_folder: Semester 1
     <ul>
@@ -14,7 +17,7 @@
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/computer_systems_architecture"> 
-          :laptop:  Computer Systems Architecture
+          :ambulance:  Computer Systems Architecture
         </a>
       </li>
     </ul>
