@@ -1,0 +1,5 @@
+
+13;tractor;70.0
+21;ambulanta;450.0
+33;chiuveta;21.5
+69;paco;567.0

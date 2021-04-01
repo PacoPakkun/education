@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="609.0" prefWidth="414.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MainController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="416.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../design/back3.jpg" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabPane" layoutX="-2.0" layoutY="53.0" prefHeight="570.0" prefWidth="418.0" stylesheets="@../css/tab.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Friends">
+            <content>
+              <AnchorPane fx:id="friends" minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="440.0">
+                     <children>
+                        <Button fx:id="remove" disable="true" layoutX="218.0" layoutY="476.0" mnemonicParsing="false" onMouseClicked="#removeHandler" prefHeight="30.0" prefWidth="83.0" style="-fx-background-radius: 5em; -fx-background-color: #DB6181;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                        <Button fx:id="chat" disable="true" layoutX="117.0" layoutY="476.0" mnemonicParsing="false" onMouseClicked="#chatHandler" prefHeight="30.0" prefWidth="83.0" style="-fx-background-radius: 5em; -fx-background-color: #449480;" text="Chat" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Line endX="100.0" layoutX="135.0" layoutY="526.0" startX="-100.0" stroke="WHITE" />
+                        <Line endX="-123.5999984741211" endY="276.0" layoutX="142.0" layoutY="237.0" startX="-123.5999984741211" startY="-102.40000915527344" stroke="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Requests">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="418.0">
+                     <children>
+                        <TableView fx:id="requests" layoutX="14.0" layoutY="14.0" onMouseClicked="#checkRequestHandler" prefHeight="408.0" prefWidth="388.0" stylesheets="@../css/table.css">
+                           <columns>
+                              <TableColumn fx:id="numeRequest" prefWidth="131.99996662139893" text="Nume" />
+                              <TableColumn fx:id="prenumeRequest" prefWidth="132.80006408691406" text="Prenume" />
+                              <TableColumn fx:id="statusRequest" prefWidth="116.00006103515625" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="accept" disable="true" layoutX="131.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#acceptHandler" prefHeight="26.0" prefWidth="66.0" style="-fx-background-radius: 5em;" text="Accept">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                        <Button fx:id="decline" disable="true" layoutX="219.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#declineHandler" prefHeight="26.0" prefWidth="66.0" style="-fx-background-radius: 5em; -fx-background-color: #DB6181;" text="Decline" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Events">
+              <content>
+                <AnchorPane fx:id="events" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="147.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#eventHandler" prefHeight="26.0" prefWidth="123.0" style="-fx-background-radius: 5em;" text="Create Event" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="414.0">
+                           <children>
+                              <Button fx:id="cancel" layoutX="536.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#cancelHandler" prefHeight="26.0" prefWidth="54.0" text="Cancel" />
+                              <TableView fx:id="people" layoutX="33.0" layoutY="18.0" onMouseClicked="#checkPeopleHandler" prefHeight="370.0" prefWidth="359.0" stylesheets="@../css/table.css">
+                                 <columns>
+                                    <TableColumn fx:id="numePeople" prefWidth="174.40002822875977" text="Nume" />
+                                    <TableColumn fx:id="prenumePeople" prefWidth="174.3999481201172" text="Prenume" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="cancel" disable="true" layoutX="217.0" layoutY="462.0" mnemonicParsing="false" onMouseClicked="#cancelHandler" prefHeight="26.0" prefWidth="83.0" style="-fx-background-radius: 5em; -fx-background-color: #DB6181;" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="add" disable="true" layoutX="117.0" layoutY="462.0" mnemonicParsing="false" onMouseClicked="#addHandler" prefHeight="26.0" prefWidth="83.0" style="-fx-background-radius: 5em;" text="Add">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Pagination fx:id="page" layoutX="26.0" layoutY="396.0" onMouseClicked="#pageHandler" pageCount="2" prefHeight="58.0" prefWidth="362.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Activity">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="416.0">
+                     <children>
+                        <DatePicker fx:id="from" layoutX="23.0" layoutY="53.0" onAction="#chartHandler" />
+                        <DatePicker fx:id="to" layoutX="221.0" layoutY="53.0" onAction="#chartHandler" />
+                        <Label layoutX="96.0" layoutY="25.0" text="From" textFill="WHITE" />
+                        <Label layoutX="301.0" layoutY="25.0" text="To" textFill="WHITE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000009e" height="338.0" layoutY="94.0" opacity="0.26" stroke="TRANSPARENT" strokeType="INSIDE" width="418.0" />
+                        <LineChart fx:id="chart" layoutX="6.0" layoutY="106.0" prefHeight="310.0" prefWidth="398.0" stylesheets="@../css/chart.css">
+                          <xAxis>
+                            <CategoryAxis prefWidth="348.0" side="BOTTOM" tickLabelsVisible="false" tickMarkVisible="false" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis minorTickVisible="false" prefWidth="22.0" side="LEFT" tickLabelFill="WHITE" upperBound="9.0" />
+                          </yAxis>
+                        </LineChart>
+                        <Button layoutX="156.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#downloadHandler" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 5em;" text="Download">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="label" layoutX="14.0" layoutY="16.0" text="Logged in as" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button layoutX="335.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#logoutHandler" prefHeight="20.0" prefWidth="66.0" style="-fx-background-radius: 5em;" text="Logout" />
+      <Button fx:id="bell" layoutX="293.0" layoutY="13.0" mnemonicParsing="false" onAction="#newsHandler" style="-fx-background-radius: 5em;" text="🔔">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

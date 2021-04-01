@@ -1,0 +1,45 @@
+﻿1,a,Scoala Gimnaziala “Horea”,1
+2,b,Scoala Gimnaziala “Horea”,1
+3,c,Scoala Gimnaziala “Horea”,1
+4,d,Scoala Gimnaziala “Horea”,1
+5,e,Scoala Gimnaziala “Horea”,1
+6,f,Scoala Gimnaziala “Horea”,1
+7,g,Scoala Gimnaziala “Horea”,1
+8,h,Scoala Gimnaziala “Horea”,1
+9,i,Scoala Gimnaziala “Horea”,1
+10,j,Scoala Gimnaziala “Horea”,1
+11,k,Scoala Gimnaziala “Horea”,1
+12,l,Scoala Gimnaziala “Horea”,1
+13,m,Scoala Gimnaziala “Horea”,1
+14,n,Scoala Gimnaziala “Horea”,1
+15,o,Scoala Gimnaziala “Horea”,1
+16,a,Scoala Gimnaziala "Octavian Goga",2
+17,b,Scoala Gimnaziala “Octavian Goga”,2
+18,c,Scoala Gimnaziala “Octavian Goga”,2
+19,d,Scoala Gimnaziala “Octavian Goga”,2
+20,e,Scoala Gimnaziala “Octavian Goga”,2
+21,f,Scoala Gimnaziala “Octavian Goga”,2
+22,g,Scoala Gimnaziala “Octavian Goga”,2
+23,h,Scoala Gimnaziala “Octavian Goga”,2
+24,i,Scoala Gimnaziala “Octavian Goga”,2
+25,j,Scoala Gimnaziala “Octavian Goga”,2
+26,k,Scoala Gimnaziala “Octavian Goga”,2
+27,l,Scoala Gimnaziala “Octavian Goga”,2
+28,m,Scoala Gimnaziala “Octavian Goga”,2
+29,n,Scoala Gimnaziala “Octavian Goga”,2
+30,o,Scoala Gimnaziala “Octavian Goga”,2
+31,a,Liceul Teoretic "Onisifor Ghibu",14
+32,b,Liceul Teoretic "Onisifor Ghibu",14
+33,c,Liceul Teoretic "Onisifor Ghibu",14
+34,d,Liceul Teoretic "Onisifor Ghibu",14
+35,e,Liceul Teoretic "Onisifor Ghibu",14
+36,f,Liceul Teoretic "Onisifor Ghibu",14
+37,g,Liceul Teoretic "Onisifor Ghibu",14
+38,h,Liceul Teoretic "Onisifor Ghibu",14
+39,i,Liceul Teoretic "Onisifor Ghibu",14
+40,j,Liceul Teoretic "Onisifor Ghibu",14
+41,k,Liceul Teoretic "Onisifor Ghibu",14
+42,l,Liceul Teoretic "Onisifor Ghibu",14
+43,m,Liceul Teoretic "Onisifor Ghibu",14
+44,n,Liceul Teoretic "Onisifor Ghibu",14
+45,o,Liceul Teoretic "Onisifor Ghibu",14

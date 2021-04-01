@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Disciplina" Collapsed="true">
+    <Position X="6.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMBEBAIAAAIAAAAAAAAIAAAiAEAAAAAAAgAEAAACA=</HashCode>
+      <FileName>disciplina.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repo" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAEEAAAABAAABAAAAACAQAAAAAAA=</HashCode>
+      <FileName>repo.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="repo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RepoException" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQAAABAAAA=</HashCode>
+      <FileName>repo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector&lt;Element&gt;" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABgACAAAAAAAAAIWIQAAQAAAAAAAAAEAgAAAAAAA=</HashCode>
+      <FileName>template.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Service" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAgAABAAEAkAAAAEQAQEAACAAAAAAGAQA=</HashCode>
+      <FileName>service.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="repo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UI" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAiAAAQAAAAAEAAAgAABgAAEAAAEAA=</HashCode>
+      <FileName>console.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="srv" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Iterator&lt;Element&gt;" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAQAAAAQAAAAAAAAAAABAgAAAJAAA=</HashCode>
+      <FileName>template.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAABAAAAAAAAQAAAABAAAACAAAAAI=</HashCode>
+      <FileName>test.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

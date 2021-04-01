@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="40.0" prefHeight="435.0" prefWidth="772.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="My Friends">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="643.0">
+                     <children>
+                        <TableView fx:id="friends" layoutX="14.0" layoutY="14.0" prefHeight="378.0" prefWidth="354.0">
+                           <columns>
+                              <TableColumn fx:id="numeFriend" prefWidth="178.39999103546143" text="Nume" />
+                              <TableColumn fx:id="prenumeFriend" prefWidth="173.59999084472656" text="Prenume" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="545.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#removeHandler" text="Remove" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Requests">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="requests" layoutX="14.0" layoutY="14.0" prefHeight="378.0" prefWidth="380.0">
+                           <columns>
+                              <TableColumn fx:id="numeRequest" prefWidth="131.99996662139893" text="Nume" />
+                              <TableColumn fx:id="prenumeRequest" prefWidth="124.80006408691406" text="Prenume" />
+                              <TableColumn fx:id="statusRequest" prefWidth="122.39996337890625" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="580.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#acceptHandler" prefHeight="26.0" prefWidth="54.0" text="Accept" />
+                        <Button layoutX="580.0" layoutY="202.0" mnemonicParsing="false" onMouseClicked="#declineHandler" text="Decline" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" minHeight="0.0" minWidth="0.0" prefHeight="411.0" prefWidth="778.0">
+                           <children>
+                              <TableView fx:id="people" onMouseClicked="#checkRequestHandler" prefHeight="378.0" prefWidth="354.0">
+                                 <columns>
+                                    <TableColumn fx:id="numePeople" prefWidth="178.39999103546143" text="Nume" />
+                                    <TableColumn fx:id="prenumePeople" prefWidth="173.59999084472656" text="Prenume" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="add" layoutX="536.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#addHandler" text="Add" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="label" layoutX="14.0" layoutY="14.0" text="Logged in as" />
+      <Button layoutX="701.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#logoutHandler" text="Logout" />
+   </children>
+</AnchorPane>

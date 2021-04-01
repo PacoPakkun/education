@@ -1,0 +1,8 @@
+
+23;peco;212
+8;anni;214
+5;cata;211
+50;ana;212
+13;stefan;215
+6;andrei;211
+55;coman;212

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Button layoutX="278.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#loginHandler" text="Login">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font></Button>
+      <TextField fx:id="username" layoutX="278.0" layoutY="152.0" />
+      <Label layoutX="216.0" layoutY="75.0" text="SocialNetwork">
+         <font>
+            <Font name="Roboto Light" size="28.0" />
+         </font></Label>
+      <Label layoutX="188.0" layoutY="155.0" text="Username:">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font></Label>
+      <Label layoutX="189.0" layoutY="205.0" text="Password:">
+         <font>
+            <Font name="Roboto Light" size="14.0" />
+         </font></Label>
+      <PasswordField fx:id="password" layoutX="278.0" layoutY="202.0" />
+   </children>
+</AnchorPane>

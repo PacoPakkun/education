@@ -1,0 +1,4 @@
+void mesajC() 
+{
+	printf("teiubmult");
+}

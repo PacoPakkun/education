@@ -1,0 +1,20 @@
+package service;
+
+import java.time.LocalDateTime;
+
+public class DelayTaskRunner extends AbstractTaskRunner {
+    public DelayTaskRunner(TaskRunner taskRunner) {
+        super(taskRunner);
+    }
+
+    @Override
+    public void executeOneTask() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            taskRunner.executeOneTask();
+        }
+    }
+}

@@ -1,0 +1,13 @@
+4a)
+	invLista(l1..ln)= { Ø, daca n=0
+			    adaugaFinal(l1, inverseazaLista(l2..ln)), altfel
+			  }
+
+	adaugaFinal(elem, l1..ln)= { [elem], daca n=0
+				     l1 U adaugaFinal(elem, l2..ln), altfel
+				   }
+4b)
+	maxLista(l1..ln)= { l1, daca l2..ln = Ø
+                            l1, daca l1 > maxLista(l2..ln)
+                            maxLista(l2..ln), altfel
+			  }

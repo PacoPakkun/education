@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MainController">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="40.0" prefHeight="435.0" prefWidth="416.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Friends">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="380.0">
+                     <children>
+                        <TableView fx:id="friends" layoutX="30.0" layoutY="14.0" onMouseClicked="#checkFriendsHandler" prefHeight="335.0" prefWidth="354.0">
+                           <columns>
+                              <TableColumn fx:id="numeFriend" prefWidth="178.39999103546143" text="Nume" />
+                              <TableColumn fx:id="prenumeFriend" prefWidth="173.59999084472656" text="Prenume" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="remove" disable="true" layoutX="205.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#removeHandler" text="Remove" />
+                        <Button fx:id="chat" disable="true" layoutX="151.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#chatHandler" text="Chat" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Requests">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="418.0">
+                     <children>
+                        <TableView fx:id="requests" layoutX="14.0" layoutY="14.0" onMouseClicked="#checkRequestHandler" prefHeight="335.0" prefWidth="388.0">
+                           <columns>
+                              <TableColumn fx:id="numeRequest" prefWidth="131.99996662139893" text="Nume" />
+                              <TableColumn fx:id="prenumeRequest" prefWidth="132.80006408691406" text="Prenume" />
+                              <TableColumn fx:id="statusRequest" prefWidth="116.00006103515625" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="accept" disable="true" layoutX="143.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#acceptHandler" prefHeight="26.0" prefWidth="54.0" text="Accept" />
+                        <Button fx:id="decline" disable="true" layoutX="217.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#declineHandler" text="Decline" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="414.0">
+                           <children>
+                              <TableView fx:id="people" layoutX="30.0" layoutY="14.0" onMouseClicked="#checkPeopleHandler" prefHeight="335.0" prefWidth="354.0">
+                                 <columns>
+                                    <TableColumn fx:id="numePeople" prefWidth="174.40002822875977" text="Nume" />
+                                    <TableColumn fx:id="prenumePeople" prefWidth="174.3999481201172" text="Prenume" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="add" disable="true" layoutX="155.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#addHandler" text="Add" />
+                              <Button fx:id="cancel" layoutX="536.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#cancelHandler" prefHeight="26.0" prefWidth="54.0" text="Cancel" />
+                              <Button fx:id="cancel" disable="true" layoutX="208.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#cancelHandler" text="Cancel" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="label" layoutX="14.0" layoutY="14.0" text="Logged in as" />
+      <Button layoutX="345.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#logoutHandler" text="Logout" />
+   </children>
+</AnchorPane>

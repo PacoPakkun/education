@@ -1,0 +1,244 @@
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+#include <assert.h>
+#include "test.h"
+
+void test_domain() {
+	//testeaza functionalitatile domeniului
+	MateriePrima materiePrima = createMateriePrima("Tractor", "Mega Image", 2);
+	assert(strcmp(getNume(&materiePrima), "Tractor") == 0);
+	assert(strcmp(getProducator(&materiePrima), "Mega Image") == 0);
+	assert(getCantitate(&materiePrima) == 2);
+	setNume(&materiePrima, "Jambon");
+	setProducator(&materiePrima, "Asus");
+	setCantitate(&materiePrima, 5);
+	MateriePrima materiePrima2 = createMateriePrima("Jambon", "Asus", 5);
+	assert(equal(materiePrima, materiePrima2)==0);
+	destroyMateriePrima(&materiePrima);
+	destroyMateriePrima(&materiePrima2);
+	assert(getNume(&materiePrima) == NULL);
+	assert(getProducator(&materiePrima) == NULL);
+	assert(getNume(&materiePrima) == NULL);
+	_CrtDumpMemoryLeaks();
+}
+
+void test_repo() {
+	//testeaza functionalitatile repozitoriului
+	MateriePrimaRepo materiePrimaRepo = createRepo();
+	assert(getLength(materiePrimaRepo) == 0);
+	char repoString[1000] = "";
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString,"")==0);
+	MateriePrima materiePrima = createMateriePrima("Tractor", "Mega Image", 2);//
+	addMateriePrima(&materiePrimaRepo,materiePrima);
+	assert(getLength(materiePrimaRepo) == 1);
+	assert(equal(getRepo(materiePrimaRepo)[0], materiePrima) == 0);
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Mega Image;cantitate: 2]") == 0);
+	addMateriePrima(&materiePrimaRepo, materiePrima);
+	setCantitate(&materiePrima, 4);
+	assert(getLength(materiePrimaRepo) == 1);
+	assert(equal(getRepo(materiePrimaRepo)[0], materiePrima) == 0);
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Mega Image;cantitate: 4]") == 0);
+	destroyMateriePrima(&materiePrima);
+	materiePrima = createMateriePrima("Jambon", "Asus", 5);//
+	addMateriePrima(&materiePrimaRepo, materiePrima);
+	assert(getLength(materiePrimaRepo) == 2);
+	MateriePrima materiePrima2 = createMateriePrima("Tractor", "Mega Image", 4);
+	assert(equal(getRepo(materiePrimaRepo)[0], materiePrima2) == 0);
+	assert(equal(getRepo(materiePrimaRepo)[1], materiePrima) == 0);
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Mega Image;cantitate: 4][nume: Jambon;producator: Asus;cantitate: 5]") == 0);
+	destroyMateriePrima(&materiePrima);
+	materiePrima = createMateriePrima("Tractor", "Gucci", 23);
+	assert(updateMateriePrima(&materiePrimaRepo, materiePrima)==0);
+	assert(getLength(materiePrimaRepo) == 2);
+	assert(equal(getRepo(materiePrimaRepo)[0], materiePrima) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Jambon", "Asus", 5);
+	assert(equal(getRepo(materiePrimaRepo)[1], materiePrima2) == 0);
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Gucci;cantitate: 23][nume: Jambon;producator: Asus;cantitate: 5]") == 0);
+	destroyMateriePrima(&materiePrima);
+	materiePrima = createMateriePrima("Chiuveta", "Gucci", 23);
+	assert(updateMateriePrima(&materiePrimaRepo, materiePrima) == 1);
+	destroyMateriePrima(&materiePrima);
+	materiePrima = createMateriePrima("Jambon", "Asus", 5);
+	assert(deleteMateriePrima(&materiePrimaRepo, materiePrima) == 0);
+	assert(getLength(materiePrimaRepo) == 1);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(materiePrimaRepo)[0], materiePrima2) == 0);
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Gucci;cantitate: 23]") == 0);
+	assert(deleteMateriePrima(&materiePrimaRepo, materiePrima) == 1);
+	destroyMateriePrima(&materiePrima);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	addMateriePrima(&materiePrimaRepo, materiePrima2);
+	assert(getLength(materiePrimaRepo) == 2);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(materiePrimaRepo)[0], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	assert(equal(getRepo(materiePrimaRepo)[1], materiePrima2) == 0);
+	str(repoString, materiePrimaRepo);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Gucci;cantitate: 23][nume: Sparanghel;producator: Paco Rabanne;cantitate: 13]") == 0);
+	destroyMateriePrima(&materiePrima2);
+	MateriePrimaRepo filtruNume = filterNume(materiePrimaRepo,'T');
+	assert(getLength(filtruNume) == 1);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(filtruNume)[0], materiePrima2) == 0);
+	str(repoString, filtruNume);
+	assert(strcmp(repoString, "[nume: Tractor;producator: Gucci;cantitate: 23]") == 0);
+	destroyRepo(&filtruNume);
+	filtruNume = filterNume(materiePrimaRepo, 'F');
+	assert(getLength(filtruNume) == 0);
+	str(repoString, filtruNume);
+	assert(strcmp(repoString, "") == 0);
+	destroyRepo(&filtruNume);
+	destroyMateriePrima(&materiePrima2);
+	MateriePrimaRepo filtruCantitate = filterCantitate(materiePrimaRepo, 20);
+	assert(getLength(filtruCantitate) == 1);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	assert(equal(getRepo(filtruCantitate)[0], materiePrima2) == 0);
+	str(repoString, filtruCantitate);
+	assert(strcmp(repoString, "[nume: Sparanghel;producator: Paco Rabanne;cantitate: 13]") == 0);
+	destroyRepo(&filtruCantitate);
+	filtruCantitate = filterCantitate(materiePrimaRepo, 5);
+	assert(getLength(filtruCantitate) == 0);
+	str(repoString, filtruCantitate);
+	assert(strcmp(repoString, "") == 0);
+	destroyRepo(&filtruCantitate);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Chiuveta", "Samsung", 45);
+	addMateriePrima(&materiePrimaRepo, materiePrima2);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Lava Cake", "25th", 17);
+	addMateriePrima(&materiePrimaRepo, materiePrima2);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Coronavirus", "China", 911);
+	addMateriePrima(&materiePrimaRepo, materiePrima2);
+	destroyMateriePrima(&materiePrima2);
+	MateriePrimaRepo sortareNume = sortNume(materiePrimaRepo, 1);
+	materiePrima2 = createMateriePrima("Chiuveta", "Samsung", 45);
+	assert(equal(getRepo(sortareNume)[0], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Coronavirus", "China", 911);
+	assert(equal(getRepo(sortareNume)[1], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Lava Cake", "25th", 17);
+	assert(equal(getRepo(sortareNume)[2], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	assert(equal(getRepo(sortareNume)[3], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(sortareNume)[4], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	destroyRepo(&sortareNume);
+	sortareNume = sortNume(materiePrimaRepo, -1);
+	materiePrima2 = createMateriePrima("Chiuveta", "Samsung", 45);
+	assert(equal(getRepo(sortareNume)[4], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Coronavirus", "China", 911);
+	assert(equal(getRepo(sortareNume)[3], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Lava Cake", "25th", 17);
+	assert(equal(getRepo(sortareNume)[2], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	assert(equal(getRepo(sortareNume)[1], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(sortareNume)[0], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	destroyRepo(&sortareNume);
+	MateriePrimaRepo sortareCantitate = sortCantitate(materiePrimaRepo, 1);
+	materiePrima2 = createMateriePrima("Chiuveta", "Samsung", 45);
+	assert(equal(getRepo(sortareCantitate)[3], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Coronavirus", "China", 911);
+	assert(equal(getRepo(sortareCantitate)[4], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Lava Cake", "25th", 17);
+	assert(equal(getRepo(sortareCantitate)[1], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	assert(equal(getRepo(sortareCantitate)[0], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(sortareCantitate)[2], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	destroyRepo(&sortareCantitate);
+	sortareCantitate = sortCantitate(materiePrimaRepo, -1);
+	materiePrima2 = createMateriePrima("Chiuveta", "Samsung", 45);
+	assert(equal(getRepo(sortareCantitate)[1], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Coronavirus", "China", 911);
+	assert(equal(getRepo(sortareCantitate)[0], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Lava Cake", "25th", 17);
+	assert(equal(getRepo(sortareCantitate)[3], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Sparanghel", "Paco Rabanne", 13);
+	assert(equal(getRepo(sortareCantitate)[4], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	materiePrima2 = createMateriePrima("Tractor", "Gucci", 23);
+	assert(equal(getRepo(sortareCantitate)[2], materiePrima2) == 0);
+	destroyMateriePrima(&materiePrima2);
+	destroyRepo(&sortareCantitate);
+	destroyRepo(&materiePrimaRepo);
+	_CrtDumpMemoryLeaks();
+}
+
+void test_service() {
+	//testeaza functionalitatile din service
+	MateriePrimaRepo materiePrimaRepo = createRepo();
+	Service service = createService(materiePrimaRepo);
+	char repoString[1000]="";
+	assert(srv_add(&service, "Coronavirus", "China", 911)==0);
+	str(repoString, service.repo);
+	assert(strcmp(repoString, "[nume: Coronavirus;producator: China;cantitate: 911]") == 0);
+	assert(srv_update(&service, "Coronavirus", "Wuhan", 112) == 0);
+	str(repoString, service.repo);
+	assert(strcmp(repoString, "[nume: Coronavirus;producator: Wuhan;cantitate: 112]") == 0);
+	srv_add(&service, "Yoda", "Dostoevski", 1);
+	assert(srv_delete(&service, "Coronavirus", "Wuhan", 112) == 0);
+	str(repoString, service.repo);
+	assert(strcmp(repoString, "[nume: Yoda;producator: Dostoevski;cantitate: 1]") == 0);
+	srv_add(&service, "Coronavirus", "China", 911);
+	MateriePrimaRepo filtruNume;
+	assert(srv_filterNume(&service,&filtruNume, 'Y') == 0);
+	str(repoString, filtruNume);
+	assert(strcmp(repoString, "[nume: Yoda;producator: Dostoevski;cantitate: 1]") == 0);
+	destroyRepo(&filtruNume);
+	MateriePrimaRepo filtruCantitate;
+	assert(srv_filterCantitate(&service, &filtruCantitate, 10) == 0);
+	str(repoString, filtruCantitate);
+	assert(strcmp(repoString, "[nume: Yoda;producator: Dostoevski;cantitate: 1]") == 0);
+	destroyRepo(&filtruCantitate);
+	MateriePrimaRepo sortareNume;
+	assert(srv_sortNume(&service, &sortareNume, 1) == 0);
+	str(repoString, sortareNume);
+	assert(strcmp(repoString, "[nume: Coronavirus;producator: China;cantitate: 911][nume: Yoda;producator: Dostoevski;cantitate: 1]") == 0);
+	destroyRepo(&sortareNume);
+	MateriePrimaRepo sortareCantitate;
+	assert(srv_sortCantitate(&service, &sortareCantitate, 10) == 0);
+	str(repoString, sortareCantitate);
+	assert(strcmp(repoString, "[nume: Yoda;producator: Dostoevski;cantitate: 1][nume: Coronavirus;producator: China;cantitate: 911]") == 0);
+	destroyRepo(&sortareCantitate);
+	destroyService(&service);
+	_CrtDumpMemoryLeaks();
+}
+
+int run_all_tests() {
+	//ruleaza toate testele
+	test_domain();
+	test_repo();
+	test_service();
+	return 0;
+}
