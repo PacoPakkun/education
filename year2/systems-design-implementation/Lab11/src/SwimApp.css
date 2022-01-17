@@ -1,0 +1,27 @@
+.SwimApp {
+    text-align: center;
+    align-content: center;
+    color: purple;
+}
+
+.SwimApp-h1 {
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: large;
+}
+
+.UserTable {
+    text-align: center;
+    font-family: "Times New Roman";
+    font-size: medium;
+    color: purple;
+}
+
+.SwimApp-body {
+    align-content: center;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
