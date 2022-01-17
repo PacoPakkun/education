@@ -7,17 +7,17 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
     <ul>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/programming_fundamentals"> 
-          :snake:  Fundamentals of Programming 
+          Fundamentals of Programming 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/computational_logic"> 
-          :trollface:  Computational Logic 
+          Computational Logic 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/computer_systems_architecture"> 
-          :ambulance:  Computer Systems Architecture
+          Computer Systems Architecture
         </a>
       </li>
     </ul>
@@ -26,17 +26,17 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
     <ul>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/object_oriented_programming"> 
-          :poop:  Object Oriented Programming 
+           Object Oriented Programming 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/data_structures_algorithms"> 
-          :scissors:  Data Structures and Algorithms 
+           Data Structures and Algorithms 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year1/graph_algorithms"> 
-          :chart_with_upwards_trend:  Graph Algorithms
+          Graph Algorithms
         </a>
       </li>
     </ul>
@@ -45,22 +45,22 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
     <ul>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/advanced_programming"> 
-          :santa:  Advanced Methods of Programming 
+          Advanced Methods of Programming 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/computer_networks"> 
-          :outbox_tray:  Computer Networks 
+          Computer Networks 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/databases"> 
-          :nut_and_bolt:  Databases 
+          Databases 
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/functional_logic_programming"> 
-          :floppy_disk:  Functional and Logic Programming 
+          Functional and Logic Programming 
         </a>
       </li>
     </ul>
@@ -69,27 +69,27 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
     <ul>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/artificial-intelligence"> 
-          :santa:  Artificial Intelligence
+          Artificial Intelligence
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/web-programming"> 
-          :outbox_tray:  Web Programming
+          Web Programming
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/systems-design-implementation"> 
-          :nut_and_bolt:  Systems for Design and Implementation
+          Systems for Design and Implementation
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/database-management-systems"> 
-          :floppy_disk:  Database Management Systems
+          Database Management Systems
         </a>
       </li>
       <li>
         <a href="https://github.com/PacoPakkun/education/tree/main/year2/software-engineering"> 
-          :floppy_disk:  Software Engineering
+          Software Engineering
         </a>
       </li>
     </ul>
@@ -97,33 +97,33 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
   <li>:open_file_folder: Semester 5
     <ul>
       <li>
-        <a href="https://github.com/PacoPakkun/education/tree/main/year2/mobile-applications"> 
-          :santa:  Mobile Applications
+        <a href="https://github.com/PacoPakkun/education/tree/main/year3/mobile-applications"> 
+          Mobile Applications
         </a>
       </li>
       <li>
-        <a href="https://github.com/PacoPakkun/education/tree/main/year2/parallel-programming"> 
-          :outbox_tray:  Parallel Programming
+        <a href="https://github.com/PacoPakkun/education/tree/main/year3/parallel-programming"> 
+          Parallel Programming
         </a>
       </li>
       <li>
-        <a href="https://github.com/PacoPakkun/education/tree/main/year2/formal-languages"> 
-          :nut_and_bolt:  Formal Languages
+        <a href="https://github.com/PacoPakkun/education/tree/main/year3/formal-languages"> 
+          Formal Languages
         </a>
       </li>
       <li>
-        <a href="https://github.com/PacoPakkun/education/tree/main/year2/audio-video-processing"> 
-          :floppy_disk:  Audio Video Processing
+        <a href="https://github.com/PacoPakkun/education/tree/main/year3/audio-video-processing"> 
+          Audio Video Processing
         </a>
       </li>
       <li>
-        <a href="https://github.com/PacoPakkun/education/tree/main/year2/collective-project"> 
-          :floppy_disk:  Collective Project
+        <a href="https://github.com/PacoPakkun/education/tree/main/year3/collective-project"> 
+          Collective Project
         </a>
       </li>
       <li>
-        <a href="https://github.com/PacoPakkun/education/tree/main/year2/virtual-reality"> 
-          :floppy_disk:  Virtual Reality
+        <a href="https://github.com/PacoPakkun/education/tree/main/year3/virtual-reality"> 
+          Virtual Reality
         </a>
       </li>
     </ul>
