@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+        <class name="domain.Spectator"
+               table="Spectatori">
+            <id name="id" column="id">
+                <generator class="increment"/>
+            </id>
+            <property
+                    name="nume"
+                    column="nume"/>
+            <property
+                    name="tel"
+                    column="tel"/>
+        </class>
+</hibernate-mapping>

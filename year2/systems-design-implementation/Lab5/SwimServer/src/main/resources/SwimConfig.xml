@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="dbProps" location="classpath:config.properties"/>
+
+    <bean id="participantValidator" class="validator.ParticipantValidator"/>
+
+    <bean id="participantRepoDB" class="repo.db.ParticipantRepositoryDB">
+        <constructor-arg ref="dbProps"/>
+        <constructor-arg ref="participantValidator"/>
+    </bean>
+
+    <bean id="probaRepoDB" class="repo.db.ProbaRepositoryDB">
+        <constructor-arg ref="dbProps"/>
+    </bean>
+
+    <bean id="inscriereRepoDB" class="repo.db.InscriereRepositoryDB">
+        <constructor-arg ref="dbProps"/>
+    </bean>
+
+    <bean id="userRepoDB" class="repo.db.UserRepositoryDB">
+        <constructor-arg ref="dbProps"/>
+    </bean>
+
+    <bean id="service" class="srv.Service">
+        <constructor-arg ref="participantRepoDB"/>
+        <constructor-arg ref="probaRepoDB"/>
+        <constructor-arg ref="inscriereRepoDB"/>
+        <constructor-arg ref="userRepoDB"/>
+    </bean>
+
+
+</beans>

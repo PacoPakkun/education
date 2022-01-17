@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="SwimDB">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.19">
+    <root id="1">
+      <ServerVersion>3.34.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="Inscrieri"/>
+    <table id="7" parent="2" name="Participanti"/>
+    <table id="8" parent="2" name="Probe"/>
+    <table id="9" parent="2" name="Useri"/>
+    <table id="10" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="11" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="12" parent="6" name="id_participant">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="13" parent="6" name="id_proba">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <index id="14" parent="6" name="sqlite_autoindex_Inscrieri_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_participant
+id_proba</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="15" parent="6" name="Inscrieri_pk">
+      <ColNames>id_participant
+id_proba</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Inscrieri_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="16" parent="6" name="Inscrieri_Participanti_id_fk">
+      <ColNames>id_participant</ColNames>
+      <RefTableName>Participanti</RefTableName>
+      <RefKeyName>Participanti_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="17" parent="6" name="Inscrieri_Probe_id_fk">
+      <ColNames>id_proba</ColNames>
+      <RefTableName>Probe</RefTableName>
+      <RefKeyName>Probe_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="18" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="19" parent="7" name="nume">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <column id="20" parent="7" name="varsta">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <index id="21" parent="7" name="Participanti_id_uindex">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="22" parent="7" name="Participanti_nume_uindex">
+      <ColNames>nume</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="7" name="Participanti_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Participanti_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="24" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="25" parent="8" name="distanta">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="26" parent="8" name="stil">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <index id="27" parent="8" name="Probe_id_uindex">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="8" name="Probe_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Probe_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="29" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="30" parent="9" name="username">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <column id="31" parent="9" name="password">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <index id="32" parent="9" name="Useri_id_uindex">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="9" name="Useri_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Useri_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="34" parent="10" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="35" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="36" parent="10" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="37" parent="10" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="38" parent="10" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="39" parent="11" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="40" parent="11" name="seq">
+      <Position>2</Position>
+    </column>
+  </database-model>
+</dataSource>

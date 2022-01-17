@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX5</title>
+    <style>
+        img {
+            height: 200px;
+        }
+
+        ol {
+            margin-left: 100px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .text {
+            color: white;
+            position: absolute;
+            left: 145px;
+            top: 180px;
+            padding: 3px 90px;
+            background-color: #141414bb;
+        }
+
+        .before {
+            content: "";
+            padding: 20px;
+            position: absolute;
+            left: 106px;
+            top: 100px;
+            background: url("arrow.png") no-repeat;
+            background-size: 20px;
+        }
+
+        .after {
+            content: "";
+            padding: 20px;
+            position: absolute;
+            left: 370px;
+            top: 100px;
+            background: url("arrow2.png") no-repeat;
+            background-size: 20px;
+        }
+
+        #li2, #li3, #li4 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="before"></div>
+<ol>
+    <li id="li1">
+        <a href="https://www.foodpanda.ro/" target="_blank"><img src="1.jpg" alt="">
+            <div class="text">taco</div>
+        </a>
+    </li>
+    <li id="li2">
+        <a href="https://glovoapp.com/" target="_blank"><img src="2.jpg" alt="">
+            <div class="text">taco2</div>
+        </a>
+    </li>
+    <li id="li3">
+        <a href="https://tazz.ro/" target="_blank"><img src="3.jpg" alt="">
+            <div class="text">taco3</div>
+        </a>
+    </li>
+    <li id="li4">
+        <a href="https://food.bolt.eu/ro-ro/" target="_blank"><img src="4.jpg" alt="">
+            <div class="text">taco4</div>
+        </a>
+    </li>
+</ol>
+<div class="after"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="ex5.js"></script>
+</body>
+</html>

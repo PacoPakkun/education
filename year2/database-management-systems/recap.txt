@@ -1,0 +1,38 @@
+atomicitate
+consistenta
+izolare
+durabilitate
+
+dirty reads - non commited reads
+non repeatable reads - commited update reads
+phantom reads - commited insert reads
+deadlock - concurrent writes
+
+planificari seriale/nonseriale
+planificari serializabile -> view-serializabile -> conflict-serializabile -> seriale
+
+db centralizate/ distribuite
+db distribuit singular/ multiplu(omogen/eterogen)
+fragmente orizontale(primare/derivate)/ verticale
+db sincron(rowa/x:y)/ asincron(peer-to-peer/server central)
+
+acces discretionar vs obligatoriu
+
+checkpointuri(timp/nr tranzactii)
+actualizare(imediata/amanata,in-place/shadow)
+buffer manager(performanta) vs recovery manager(acid)
+steal/no steal, force/no force: ideal vs trivial
+
+recuperarea distribuita: 2pc/2pc cu esec dedus/3pc
+
+aries:
+loguri(lsn,prevlsn,transid,type..,clr)+ pagelsn+ flushedlsn+ tabela de tranzactii(lastlsn)
+flushedlsn<=pagelsn
+analiza(checkpoint) -> redo(commited) -> undo(uncommited)
+
+sortari externe (k pasi): monotonii sortate (cat mai lungi) -> interclasari
+nr pasi: [log_B-1[N/B]]+1
+cost: 2N*(nr pasi)
+sortare: min heap
+interclasare: arbore de selectie
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="431.0" prefWidth="394.0" style="-fx-background-color: linear-gradient(to bottom, #eeeeee, #aaaaaa);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.MainController">
+    <children>
+        <TabPane fx:id="tabs" layoutY="36.0" prefHeight="597.0" prefWidth="394.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+            <tabs>
+                <Tab text="Probe">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="394.0">
+                            <children>
+                                <TableView fx:id="probe" layoutX="27.0" layoutY="33.0" prefHeight="497.0" prefWidth="346.0">
+                                    <columns>
+                                        <TableColumn prefWidth="59.20001029968262" text="ID">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="id" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="108.79998779296875" text="Stil">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="stil" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="70.40000915527344" text="Distanta">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="distanta" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="104.0" text="Nr participanti">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="nr" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Participanti">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ComboBox fx:id="comboProbe" layoutX="122.0" layoutY="34.0" onAction="#comboSelectionHandler" prefWidth="150.0" promptText="Proba" />
+                                <TableView fx:id="participanti" layoutX="24.0" layoutY="86.0" prefHeight="404.0" prefWidth="346.0">
+                                    <columns>
+                                        <TableColumn prefWidth="94.40002822875977" text="Nume">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="nume" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="45.5999755859375" text="Varsta">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="varsta" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="204.7999725341797" text="Probe">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="inscrieri" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Inscriere">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="nume" layoutX="123.0" layoutY="62.0" />
+                                <TextField fx:id="varsta" layoutX="123.0" layoutY="125.0" />
+                                <ListView fx:id="choiceProbe" layoutX="97.0" layoutY="202.0" prefHeight="286.0" prefWidth="200.0" />
+                                <Button layoutX="157.0" layoutY="522.0" mnemonicParsing="false" onAction="#registerHandler" prefHeight="26.0" prefWidth="80.0" text="Inscrie" />
+                                <Label layoutX="181.0" layoutY="35.0" text="Nume" />
+                                <Label layoutX="180.0" layoutY="99.0" text="Varsta" />
+                                <Label layoutX="181.0" layoutY="171.0" text="Probe" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Label fx:id="labelUsername" layoutX="170.0" layoutY="149.0" text="Username" />
+        <Button fx:id="button" layoutX="122.0" layoutY="286.0" mnemonicParsing="false" onAction="#loginHandler" prefHeight="34.0" prefWidth="150.0" text="Login" />
+        <Label fx:id="labelPassword" layoutX="172.0" layoutY="210.0" text="Password" />
+        <Button fx:id="logout" layoutX="317.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="0.0" prefWidth="70.0" style="-fx-background-radius: 200em;" text="Logout" visible="false">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Button>
+        <TextField fx:id="username" layoutX="123.0" layoutY="175.0" />
+        <PasswordField fx:id="password" layoutX="123.0" layoutY="240.0" />
+    </children>
+</AnchorPane>

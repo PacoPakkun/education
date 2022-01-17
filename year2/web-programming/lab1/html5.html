@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5</title>
+</head>
+<body>
+<a href="https://www.netflix.com/ro/" target="_blank"><img width="50" src="n.png" alt="Netflix"></a><br><br><br>
+<img width="400" src="netflix.svg" alt="Netflix">
+<h1>&#206;nregistrare cont</h1>
+<br>V&#259; rug&#259;m introduce&#355;i email-ul &#351;i alege&#355;i un nume de utilizator &#351;i o
+parol&#259;.<br><br>
+<form action="#" method="POST">
+    <table>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email" size="60" required></td>
+        </tr>
+        <tr>
+            <td>Nume:</td>
+            <td rowspan="2"><input type="text" name="username" size="60" required></td>
+        </tr>
+        <tr>
+            <td>(username)</td>
+        </tr>
+        <tr>
+            <td>Parola:</td>
+            <td><input type="password" name="parola" size="60" required></td>
+        </tr>
+    </table>
+    <br>
+    <h3>PASUL 1</h3>
+    <table>
+        <tr>
+            <th colspan="6">
+                Date personale
+            </th>
+        </tr>
+        <tr>
+            <td>Nume:</td>
+            <td colspan="2"><input type="text" name="nume" size="60"></td>
+            <td>Prenume:</td>
+            <td colspan="2"><input type="text" name="prenume" size="78"></td>
+        </tr>
+        <tr>
+            <td>CNP:</td>
+            <td><input type="text" name="cnp" maxlength="13" size="60"></td>
+            <td>Serie:</td>
+            <td><input type="text" name="serie" maxlength="2" size="20"></td>
+            <td>Nr:</td>
+            <td><input type="text" name="nr" maxlength="6" size="40"></td>
+        </tr>
+        <tr>
+            <td>&#354;ara:</td>
+            <td><input type="text" name="tara" value="Rom&#226;nia" readonly size="60"></td>
+            <td>Jude&#355;:</td>
+            <td><select name="judet">
+                <option value="1">Cluj</option>
+                <option value="2">Alba</option>
+                <option value="3">Suceava</option>
+                <option value="4">Sibiu</option>
+            </select></td>
+            <td>Localitate:</td>
+            <td><input type="text" name="localitate" size="40"></td>
+        </tr>
+    </table>
+    <br>
+    <h3>PASUL 2</h3>
+    <b>Alege abonamentul potrivit pentru tine.</b>
+    <ul >
+        <li>Po&#355;i anula oric&#226;nd, f&#259;r&#259; obliga&#355;ii.</li>
+        <li>Tot con&#355;inutul de pe Netflix, la un tarif avantajos.</li>
+        <li>Vizionare nelimitat&#259; pe toate dispozitivele.</li>
+        <li>Vizioneaz&#259; dup&#259; pofta inimii. F&#259;r&#259; reclame.</li>
+        <li>Recomand&#259;ri pe gustul t&#259;u.</li>
+        <li>Schimb&#259; sau anuleaz&#259; abonamentul oric&#226;nd.</li>
+    </ul>
+    <br>
+    <table>
+        <tr>
+            <th colspan="6">
+                Abonamente disponibile
+            </th>
+        </tr>
+        <tr>
+            <th>Tip</th>
+            <th>Tarif lunar</th>
+            <th>Calitate video</th>
+            <th>Rezolu&#355;ie</th>
+            <th>Vizioneaz&#259; pe orice dispozitiv</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Minim</td>
+            <td>7,99 EUR</td>
+            <td>Bun&#259;</td>
+            <td>480p</td>
+            <td>Nu</td>
+            <td><input type="radio" name="abonament" value="1" checked></td>
+        </tr>
+        <tr>
+            <td>Standard</td>
+            <td>9,99 EUR</td>
+            <td>Mai bun&#259;</td>
+            <td>1080p</td>
+            <td>Da</td>
+            <td><input type="radio" name="abonament" value="2"></td>
+        </tr>
+        <tr>
+            <td>Premium</td>
+            <td>11,99 EUR</td>
+            <td>Optim&#259;</td>
+            <td>4K Full HD</td>
+            <td>Da</td>
+            <td><input type="radio" name="abonament" value="3"></td>
+        </tr>
+    </table>
+    <br><br>
+    <h3>PASUL 3</h3>
+    Pentru a continua, v&#259; rug&#259;m introduce&#355;i datele cardului bancar.<br><br>
+    <table>
+        <tr>
+            <th>Configurarea cardului de credit</th>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>Nume titular:</td>
+                        <td><input type="text" name="titular" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td>Numar card:</td>
+                        <td><input type="text" name="card" size="50" maxlength="19"></td>
+                    </tr>
+                    <tr>
+                        <td>Data expirarii:</td>
+                        <td><input type="date" name="data" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td>Cod de securitate (CVV)</td>
+                        <td><input type="number" name="cvv" min="100" max="999" step="2"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <fieldset>
+        <legend>Condi&#355;ii de Utilizare Netflix</legend>
+        <ul>
+            <li>Abonamentul.
+            <ol start="1">
+                <li>Abonamentul t&#259;u Netflix se va prelungi p&#226;n&#259; la reziliere.</li>
+                <li>Unele planuri de abonament pot avea condi&#355;ii &#351;i limit&#259;ri diferite, acestea fiind
+                    dezv&#259;luite &#238;n momentul
+                    &#238;nregistr&#259;rii sau prin intermediul altor mesaje care &#238;&#355;i sunt adresate.
+                </li>
+            </ol></li>
+            <li>Facturare &#351;i Anulare.
+            <ol start="3">
+                <li>Perioada de Facturare. Tariful aferent abonamentului pentru serviciul Netflix va fi perceput prin
+                    Metoda
+                    de Plat&#259; la ziua de plat&#259; precizat&#259; &#238;n pagina Cont.
+                </li>
+                <li>Metode de Plat&#259;. Pentru a folosi serviciul Netflix, trebuie s&#259; furnizezi una sau mai multe
+                    metode de plat&#259;.
+                </li>
+                <li>Anulare. Po&#355;i anula abonamentul t&#259;u Netflix oric&#226;nd &#351;i vei continua s&#259; ai
+                    acces la
+                    serviciul Netflix p&#226;n&#259; la finalul perioadei tale de facturare.
+                </li>
+            </ol></li>
+            <li>Oferte promo&#355;ionale.
+            <ol type="I" start="6">
+                <li>Putem oferi din c&#226;nd &#238;n c&#226;nd oferte promo&#355;ionale speciale, planuri de abonament
+                    sau
+                    abonamente.
+                </li>
+            </ol></li>
+        </ul>
+        <br>
+        <input type="checkbox" name="gdpr" value="ok1"><b>Sunt de acord cu prelucrarea datelor cu caracter personal</b>.<br>
+        <input type="checkbox" name="gdpr" value="ok2"><b>Sunt de acord cu condi&#355;iile de utilizare</b>.<br>
+        <input type="checkbox" name="gdpr" value="ok3" checked><b>Sunt de acord s&#259; primesc notific&#259;ri</b>.<br><br>
+    </fieldset>
+    <br><br>
+    V&#259; mul&#355;umim c&#259; a&#355;i ales platforma Netflix! Mai jos ne pute&#355;i scrie pentru observa&#355;ii/nel&#259;muriri.<br>
+    <textarea rows="5" cols="50"></textarea>
+    <br><br>
+    <input type="submit">
+    <br><br><br><br><br>
+    Preferin&#355;e de Cookie:<br>
+    <select name="cookies" multiple>
+        <option value="1">Ciocolata</option>
+        <option value="2">Caramel</option>
+        <option value="3" selected>Scortisoara</option>
+        <option value="4">Sibiu</option>
+    </select><br>
+    Pentru informa&#355;ii suna&#355;i la <input type="text" value="0800-672-120" disabled>
+</form>
+</body>
+</html>

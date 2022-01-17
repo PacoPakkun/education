@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="teatru">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.19">
+    <root id="1">
+      <ServerVersion>3.34.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="Locuri"/>
+    <table id="7" parent="2" name="Manageri"/>
+    <table id="8" parent="2" name="Spectacole"/>
+    <table id="9" parent="2" name="Spectatori"/>
+    <table id="10" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="11" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="12" parent="6" name="nr">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="13" parent="6" name="pozitie">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="14" parent="6" name="pret">
+      <Position>3</Position>
+      <DataType>float|0s</DataType>
+    </column>
+    <column id="15" parent="6" name="stare">
+      <Position>4</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="16" parent="6" name="id_spectacol">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="17" parent="6" name="id_spectator">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <key id="18" parent="6" name="Locuri_pk">
+      <ColNames>nr</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="19" parent="6">
+      <ColNames>id_spectacol</ColNames>
+      <RefTableName>Spectacole</RefTableName>
+      <RefKeyName>Spectacole_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="20" parent="6">
+      <ColNames>id_spectator</ColNames>
+      <RefTableName>Spectatori</RefTableName>
+      <RefKeyName>Spectatori_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="21" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="22" parent="7" name="nume">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <column id="23" parent="7" name="password">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <index id="24" parent="7" name="Manageri_id_uindex">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="7" name="Manageri_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Manageri_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="26" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="27" parent="8" name="nume">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="28" parent="8" name="ora">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="29" parent="8" name="id_manager">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <key id="30" parent="8" name="Spectacole_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="8">
+      <ColNames>id_manager</ColNames>
+      <RefTableName>Manageri</RefTableName>
+      <RefKeyName>Manageri_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="32" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="33" parent="9" name="nume">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <column id="34" parent="9" name="tel">
+      <Position>3</Position>
+      <DataType>varchar(15)|0s</DataType>
+    </column>
+    <index id="35" parent="9" name="Spectatori_id_uindex">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="9" name="Spectatori_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>Spectatori_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="37" parent="10" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="38" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="39" parent="10" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="40" parent="10" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="41" parent="10" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="42" parent="11" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="43" parent="11" name="seq">
+      <Position>2</Position>
+    </column>
+  </database-model>
+</dataSource>

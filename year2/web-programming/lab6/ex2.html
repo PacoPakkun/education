@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX 2</title>
+    <style>
+        button {
+            width: 80px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <table id="people" cellpadding="10" border="1px">
+        <tr>
+            <th>
+                Nume
+            </th>
+            <th>
+                Prenume
+            </th>
+            <th>
+                Telefon
+            </th>
+            <th>
+                Email
+            </th>
+        </tr>
+    </table>
+    <br>
+    <button id="prev" disabled>Previous</button>
+    <button id="next">Next</button>
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var page = 1
+    getData()
+
+    function getData() {
+        $.get("ex2.php?page=" + page, function (response) {
+            response = response.split(';');
+
+            response.forEach(function (person) {
+                var person = person.split(',')
+                var row = document.createElement('tr')
+                for (var i = 0; i < 4; i++) {
+                    var cell = document.createElement('td')
+                    cell.innerText = person[i]
+                    row.appendChild(cell)
+                }
+                document.getElementById('people').appendChild(row);
+            })
+        })
+
+        // var xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onreadystatechange = function () {
+        //     if (this.readyState === 4 && this.status === 200) {
+        //         var response = this.responseText.split(';');
+        //
+        //         response.forEach(function (person) {
+        //             var person = person.split(',')
+        //             var row = document.createElement('tr')
+        //             for (var i = 0; i < 4; i++) {
+        //                 var cell = document.createElement('td')
+        //                 cell.innerText = person[i]
+        //                 row.appendChild(cell)
+        //             }
+        //             document.getElementById('people').appendChild(row);
+        //         })
+        //     }
+        // }
+        // xmlhttp.open("GET", "ex2.php?page=" + page, true);
+        // xmlhttp.send();
+    }
+
+    $("#prev").click(function () {
+        if (page === 3) {
+            $("#next").prop('disabled', false);
+        }
+        page -= 1
+        if (page === 1) {
+            this.disabled = true
+        }
+        $("table tr").slice(-3).remove();
+        getData()
+    })
+
+    $("#next").click(function () {
+        if (page === 1) {
+            $("#prev").prop('disabled', false);
+        }
+        page += 1
+        if (page === 3) {
+            this.disabled = true
+        }
+        $("table tr").slice(-3).remove();
+        getData()
+    })
+</script>
+</body>
+</html>

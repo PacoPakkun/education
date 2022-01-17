@@ -1,0 +1,29 @@
+CREATE DATABASE MONTH_REPORT
+USE MONTH_REPORT
+
+CREATE TABLE Report (
+	Id INT PRIMARY KEY,
+	Registration_Date DATE
+)
+
+INSERT INTO Report (Id, Registration_Date) VALUES 
+(1,'2021-02-21'),
+(2,'2021-02-22'),
+(3,'2021-02-23'),
+(4,'2021-02-24'),
+(5,'2021-03-25'),
+(6,'2021-03-26'),
+(7,'2021-03-27'),
+(8,'2021-03-28'),
+(9,'2021-03-12'),
+(10,'2021-04-13'),
+(11,'2021-04-14')
+
+SELECT * FROM Report
+
+SELECT DATENAME(month, t1.Registration_Date) as Monthh, count(t1.Registration_Date)-count(t2.Registration_Date) as Change
+FROM Report t1 INNER JOIN Report t2 
+ON month(t2.Registration_Date) = month(t1.Registration_Date)-1
+WHERE month(t1.Registration_Date)>2
+GROUP BY DATENAME(month, t1.Registration_Date), DATENAME(month, t2.Registration_Date), month(t1.Registration_Date)
+ORDER BY month(t1.Registration_Date)

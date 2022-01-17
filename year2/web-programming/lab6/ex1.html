@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX 1</title>
+    <style>
+        select {
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Statii trenuri</h1>
+    <table border="1px black" cellpadding="5px">
+        <tr>
+            <th>
+                Plecare
+            </th>
+            <th>
+                Sosire
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <select id="start" size="10">
+                </select>
+            </td>
+            <td>
+                <select id="stop" size="10">
+                </select>
+            </td>
+        </tr>
+        </tr>
+    </table>
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $.get('ex1.php?city=', function (response) {
+        response = response.split(';')
+        response[0].split(',').forEach(function (city) {
+            var option = document.createElement('option')
+            option.innerText = city
+
+            option.addEventListener("click", function () {
+                $.get('ex1.php?city=' + this.innerText, function (response) {
+                    response = response.split(',')
+                    document.getElementById('stop').innerHTML = ''
+                    response.forEach(function (city) {
+                        var option = document.createElement('option')
+                        option.innerText = city
+                        document.getElementById('stop').appendChild(option);
+                    })
+                })
+            })
+
+            document.getElementById('start').appendChild(option);
+        })
+
+        response[1].split(',').forEach(function (city) {
+            var option = document.createElement('option')
+            option.innerText = city
+            document.getElementById('stop').appendChild(option);
+        })
+    })
+
+    // var xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = function () {
+    //     if (this.readyState === 4 && this.status === 200) {
+    //         var response = this.responseText.split(';');
+    //
+    //         response[0].split(',').forEach(function (city) {
+    //             var option = document.createElement('option')
+    //             option.innerText = city
+    //
+    //             option.addEventListener("click", function () {
+    //                 var xmlhttp = new XMLHttpRequest();
+    //                 xmlhttp.onreadystatechange = function () {
+    //                     if (this.readyState === 4 && this.status === 200) {
+    //                         var response = this.responseText.split(',');
+    //                         document.getElementById('stop').innerHTML = ''
+    //                         response.forEach(function (city) {
+    //                             var option = document.createElement('option')
+    //                             option.innerText = city
+    //                             document.getElementById('stop').appendChild(option);
+    //                         })
+    //                     }
+    //                 }
+    //                 xmlhttp.open("GET", "ex1.php?city=" + this.innerText, true);
+    //                 xmlhttp.send();
+    //             })
+    //
+    //             document.getElementById('start').appendChild(option);
+    //         })
+    //
+    //         response[1].split(',').forEach(function (city) {
+    //             var option = document.createElement('option')
+    //             option.innerText = city
+    //             document.getElementById('stop').appendChild(option);
+    //         })
+    //     }
+    // }
+    // xmlhttp.open("GET", "ex1.php?city=", true);
+    // xmlhttp.send();
+</script>
+</body>
+</html>

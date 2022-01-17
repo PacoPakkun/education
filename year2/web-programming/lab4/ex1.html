@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX1</title>
+</head>
+<body>
+<select id="s1" size="10" multiple>
+    <option value="1" id="o1" ondblclick="move(this.id)">Alb</option>
+    <option value="2" id="o2" ondblclick="move(this.id)">Negru</option>
+    <option value="3" id="o3" ondblclick="move(this.id)">Roz</option>
+    <option value="4" id="o4" ondblclick="move(this.id)">Mov</option>
+</select>
+<select id="s2" size="10" multiple>
+    <option value="1" id="o5" ondblclick="move(this.id)">Albastru</option>
+    <option value="2" id="o6" ondblclick="move(this.id)">Verde</option>
+    <option value="3" id="o7" ondblclick="move(this.id)">Portocaliu</option>
+    <option value="4" id="o8" ondblclick="move(this.id)">Rosu</option>
+</select>
+<script>
+    function move(id) {
+        var item = document.getElementById(id);
+        if (item.parentElement.id === 's1') {
+            item.parentNode.removeChild(item);
+            document.getElementById('s2').appendChild(item);
+        } else {
+            item.parentNode.removeChild(item);
+            document.getElementById('s1').appendChild(item);
+        }
+    }
+</script>
+</body>
+</html>

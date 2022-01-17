@@ -66,6 +66,33 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
     </ul>
   </li>
   <li>:open_file_folder: Semester 4
+    <ul>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/artificial-intelligence"> 
+          :santa:  Artificial Intelligence
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/web-programming"> 
+          :outbox_tray:  Web Programming
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/systems-design-implementation"> 
+          :nut_and_bolt:  Systems for Design and Implementation
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/database-management-systems"> 
+          :floppy_disk:  Database Management Systems
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/software-engineering"> 
+          :floppy_disk:  Software Engineering
+        </a>
+      </li>
+    </ul>
   </li>
 </ul>
 

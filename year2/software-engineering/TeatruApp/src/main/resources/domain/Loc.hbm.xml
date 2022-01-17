@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Loc"
+           table="Locuri">
+        <id name="nr" column="nr">
+            <generator class="increment"/>
+        </id>
+        <property
+                name="pozitie"
+                column="pozitie"/>
+        <property
+                name="pret"
+                column="pret"/>
+        <property
+                name="stare"
+                column="stare">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">domain.Status</param>
+            </type>
+        </property>
+
+
+        <many-to-one name="spectacol" class="domain.Spectacol"
+                     column="id_spectacol"/>
+        <many-to-one name="spectator" class="domain.Spectator"
+                     column="id_spectator"/>
+    </class>
+</hibernate-mapping>

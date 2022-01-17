@@ -1,0 +1,123 @@
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    height: 80px;
+    display: inline-block;
+}
+
+.nav a {
+    height: 80px;
+    display: block;
+}
+
+.facebook {
+    width: 80px;
+    background: url('sprite.png') 0 -84px;
+}
+
+.oo {
+    width: 80px;
+    background: url('sprite.png') -84px -84px;
+}
+
+.ball {
+    width: 80px;
+    background: url('sprite.png') -168px -84px;
+}
+
+.google {
+    width: 80px;
+    background: url('sprite.png') -252px -84px;
+}
+
+.linkedin {
+    width: 80px;
+    background: url('sprite.png') -336px -84px;
+}
+
+.pinterest {
+    width: 80px;
+    background: url('sprite.png') -420px -84px;
+}
+
+.rss {
+    width: 80px;
+    background: url('sprite.png') -504px -84px;
+}
+
+.skype {
+    width: 80px;
+    background: url('sprite.png') -588px -84px;
+}
+
+.twitter {
+    width: 80px;
+    background: url('sprite.png') -672px -84px;
+}
+
+.vimeo {
+    width: 80px;
+    background: url('sprite.png') -756px -84px;
+}
+
+.youtube {
+    width: 80px;
+    background: url('sprite.png') -840px -84px;
+}
+
+.facebook a:hover {
+    width: 80px;
+    background: url('sprite.png') 0 0px;
+}
+
+.oo a:hover {
+    width: 80px;
+    background: url('sprite.png') -84px 0px;
+}
+
+.ball a:hover {
+    width: 80px;
+    background: url('sprite.png') -168px 0px;
+}
+
+.google a:hover {
+    width: 80px;
+    background: url('sprite.png') -252px 0px;
+}
+
+.linkedin a:hover {
+    width: 80px;
+    background: url('sprite.png') -336px 0px;
+}
+
+.pinterest a:hover {
+    width: 80px;
+    background: url('sprite.png') -420px 0px;
+}
+
+.rss a:hover {
+    width: 80px;
+    background: url('sprite.png') -504px 0px;
+}
+
+.skype a:hover {
+    width: 80px;
+    background: url('sprite.png') -588px 0px;
+}
+
+.twitter a:hover {
+    width: 80px;
+    background: url('sprite.png') -672px 0px;
+}
+
+.vimeo a:hover {
+    width: 80px;
+    background: url('sprite.png') -756px 0px;
+}
+
+.youtube a:hover {
+    width: 80px;
+    background: url('sprite.png') -840px 0px;
+}

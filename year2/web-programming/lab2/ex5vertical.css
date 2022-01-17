@@ -1,0 +1,21 @@
+.container {
+    width: 500px;
+    border-style: solid;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: radial-gradient(circle, rgba(251,217,63,1) 0%, rgba(253,113,33,1) 59%, rgba(255,0,0,1) 100%);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+p {
+    display: inline;
+    padding: 30px;
+}

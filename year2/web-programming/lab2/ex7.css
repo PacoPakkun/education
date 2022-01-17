@@ -1,0 +1,64 @@
+.dialog {
+    display: block;
+    width: 80%;
+}
+
+li {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 30px;
+    position: relative;
+    right: -220px;
+    margin: 50px 50px 70px 50px;
+    min-height: 250px;
+    padding: 40px 40px 0 40px;
+    text-align: center;
+}
+
+.bob {
+    background-color: lightblue;
+}
+
+.alice {
+    background-color: lightpink;
+}
+
+.bob::before {
+    content: "";
+    position: absolute;
+    left: -240px;
+    height: 200px;
+    width: 200px;
+    background: url("bob&alice.png") 0 0;
+}
+
+.alice::before {
+    content: "";
+    position: absolute;
+    left: -240px;
+    height: 200px;
+    width: 200px;
+    background: url("bob&alice.png") -200px 0;
+}
+
+.bob::after {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 20px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid #000000;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+
+.alice::after {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 20px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid #000000;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}

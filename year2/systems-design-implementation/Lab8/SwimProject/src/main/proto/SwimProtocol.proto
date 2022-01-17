@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+//package gRPC;
+//option java_package = "gRPC";
+option java_outer_classname = "SwimProtocol";
+
+service SwimService{
+  rpc login (SwimRequest) returns (SwimResponse){}
+  rpc logout (SwimRequest) returns (SwimResponse){}
+  rpc findAllProbe (Null) returns (SwimResponse){}
+  rpc addParticipant (SwimRequest) returns (SwimResponse){}
+  rpc addInscriere (SwimRequest) returns (SwimResponse){}
+  rpc nrParticipanti (SwimRequest) returns (SwimResponse){}
+  rpc getInscrisi (SwimRequest) returns (SwimResponse){}
+  rpc getInscrieri (SwimRequest) returns (SwimResponse){}
+}
+
+message Null{}
+
+message Participant {
+  int32 id = 1;
+  string nume = 2;
+  int32 varsta = 3;
+}
+
+message Proba {
+  int32 id = 1;
+  int32 distanta = 2;
+  string stil = 3;
+}
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message Inscriere{
+  int32 id_participant = 1;
+  int32 id_proba = 2;
+  Participant participant = 3;
+  Proba proba = 4;
+}
+
+message SwimRequest {
+  enum Type {Unknown = 0; UserRequest = 1; ProbaRequest = 2; ParticipantRequest = 3 ; InscriereRequest = 4 ;}
+  User user = 1;
+  Proba proba = 2;
+  Participant participant = 3;
+  Inscriere inscriere = 4;
+}
+
+message SwimResponse{
+  enum Type {Unknown = 0; Ok = 1; Error = 2; ProbaResponse = 3; ParticipantResponse = 4 ; InscriereResponse = 5 ; IntResponse = 6; ProbeResponse = 7; ParticipantiResponse = 8;}
+  Type type = 1;
+  string error = 2;
+  Proba proba = 3;
+  Participant participant = 4;
+  Inscriere inscriere = 5;
+  int32 nr = 6;
+  repeated Proba probe = 7;
+  repeated Participant participanti = 8;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX 3</title>
+    <style>
+        #container {
+            display: flex;
+            margin: auto;
+            width: 40%;
+        }
+
+        select {
+            width: 50px;
+            height: 200px;
+            margin-right: 80px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <select id="key" size="10">
+    </select>
+    <form onsubmit="save()" onchange="changed()">
+        <table cellpadding="10">
+            <tr>
+                <td>Nume</td>
+                <td><input id="nume"></td>
+            </tr>
+            <tr>
+                <td>Prenume</td>
+                <td><input id="prenume"></td>
+            </tr>
+            <tr>
+                <td>Telefon</td>
+                <td><input id="tel"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input id="email"></td>
+            </tr>
+        </table>
+        <br>
+        <center><input id="savebutt" type="submit" value="Save" disabled></center>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var idcurr
+    var change = 0
+
+    $.get("ex3.php", function (response) {
+        response.split(',').forEach(function (id) {
+            var option = document.createElement('option')
+            option.innerText = id
+            option.addEventListener("click", getData)
+            document.getElementById('key').appendChild(option);
+        })
+    })
+
+    // var xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange = function () {
+    //     if (this.readyState === 4 && this.status === 200) {
+    //         this.responseText.split(',').forEach(function (id) {
+    //             var option = document.createElement('option')
+    //             option.innerText = id
+    //             option.addEventListener("click", getData)
+    //             document.getElementById('key').appendChild(option);
+    //         })
+    //     }
+    // }
+    // xmlhttp.open("GET", "ex3.php", true);
+    // xmlhttp.send();
+
+    function getData() {
+        if (change !== 0) {
+            alert('Changes you made will be lost!')
+            change = 0
+        } else {
+            idcurr = this.innerText
+
+            $.get("ex3.php?id=" + idcurr, function (response) {
+                response = response.split(',')
+                $('#nume').val(response[0])
+                $('#prenume').val(response[1])
+                $('#tel').val(response[2])
+                $('#email').val(response[3])
+
+            })
+
+            // var xmlhttp = new XMLHttpRequest();
+            // xmlhttp.onreadystatechange = function () {
+            //     if (this.readyState === 4 && this.status === 200) {
+            //         var response = this.responseText.split(',')
+            //         $('#nume').val(response[0])
+            //         $('#prenume').val(response[1])
+            //         $('#tel').val(response[2])
+            //         $('#email').val(response[3])
+            //     }
+            // }
+            // xmlhttp.open("GET", "ex3.php?id=" + idcurr, true);
+            // xmlhttp.send();
+        }
+    }
+
+    function save() {
+        var xmlhttp = new XMLHttpRequest();
+        var url = "ex3.php?id=" + idcurr + "&nume=" + $('#nume').val() + "&prenume=" + $('#prenume').val() + "&tel=" + $('#tel').val() + "&email=" + $('#email').val()
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+
+    function changed() {
+        change = 1;
+        $("#savebutt").prop('disabled', false);
+    }
+</script>
+</body>
+</html>

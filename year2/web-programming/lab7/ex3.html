@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX 3</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <br><br>
+    <h1>Academic Info</h1>
+    <br>
+    <div>
+        <h4>Student login</h4>
+        <form action="ex3stud.php" method="post" target="_self">
+            <table cellpadding="10">
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" name="lastname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" name="firstname">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div>
+        <h4>Teacher login</h4>
+        <form action="ex3prof.php" method="post" target="_self">
+            <table cellpadding="10">
+                <tr>
+                    <td>
+                        Username:
+                    </td>
+                    <td>
+                        <input type="text" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="text" name="password">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX 4</title>
+    <style>
+        td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        table {
+            margin-left: 45%;
+            margin-top: 10%;
+        }
+    </style>
+
+
+</head>
+<body>
+<p id="startText">You start. Place your 'X'</p>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    var cells;
+    initData();
+
+    function initData() {
+        cells = document.getElementsByTagName("td");
+        for (var i = 0; i < cells.length; i++) {
+            cells[i].addEventListener('click', clickHandler);
+        }
+        var whoS = Math.round(Math.random());
+        if (whoS == 0) {
+            document.getElementById("startText").innerHTML = "Computer starts.";
+            nextMove();
+        }
+    }
+
+    function clickHandler() {
+        this.innerHTML = 'X';
+        this.style.pointerEvents = "none";
+        nextMove();
+    }
+
+    function nextMove() {
+        var values = [];
+        for (var i = 0; i < cells.length; i++) {
+            values.push(cells[i].innerHTML);
+        }
+
+        $.get("ex4.php?table=" + values.toString(), function (position) {
+            if (position === 'X') {
+                alert('You won');
+                disableCells();
+            } else if (position.charAt(0) === 'O') {
+                computerChoice(position.charAt(1));
+                alert("You lost");
+                disableCells();
+            } else {
+                if (position === '-1') {
+                    alert("Game Over. No winner this time.");
+                } else {
+                    computerChoice(position);
+                }
+            }
+        })
+
+        // var xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         var position = this.responseText;
+        //         if (position == 'X') {
+        //             alert('You won');
+        //             disableCells();
+        //         } else if (position.charAt(0) == 'O') {
+        //             computerChoice(position.charAt(1));
+        //             alert("You lost");
+        //             disableCells();
+        //         } else {
+        //             if (position == '-1') {
+        //                 alert("Game Over. No winner this time.");
+        //             } else {
+        //                 computerChoice(position);
+        //             }
+        //         }
+        //     }
+        // }
+        // xmlhttp.open("GET", "ex4.php?table=" + values.toString(), true);
+        // xmlhttp.send();
+    }
+
+    function computerChoice(poz) {
+        cells[poz].innerHTML = 'O';
+        cells[poz].style.pointerEvents = "none";
+    }
+
+    function disableCells() {
+        for (var i = 0; i < cells.length; i++) {
+            cells[i].style.pointerEvents = "none";
+        }
+    }
+
+
+</script>
+</html>

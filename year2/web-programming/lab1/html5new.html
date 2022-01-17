@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="https://www.foodpanda.ro/restaurant/v8ns/pablito" target="_blank"><img width="100" src="taco2.png"
+                                                                                alt="Tacoland"></a>
+
+    <img  height="300" width="500" src="taco.png" alt="Tacoland"><br><br><br>
+    <h1>Plasare comand&#259;</h1>
+
+<form action="#" method="POST">
+    
+        <table>
+            <tr>
+                <th colspan="6">Co&#351;ul dvs.</th>
+            </tr>
+            <tr>
+                <th>Produs</th>
+                <th>Ingrediente</th>
+                <th>Cantitate</th>
+                <th>Pre&#355;</th>
+                <th>Alege c&#226;t de picant s&#259; fie</th>
+                <th>Men&#355;iuni speciale</th>
+            </tr>
+            <tr  >
+                <td colspan="2"><b>Ranch Chicken Taco</b><br>(Taco din porumb, pulp&#259; de pui, ardei cop&#355;i,
+                    ceap&#259;
+                    caramelizat&#259;, salat&#259;, salsa, porumb, br&#226;nz&#259; cheddar - 150g)
+                </td>
+                <td><input type="text" name="cantitate1" size="5"></td>
+                <td>16.00 RON</td>
+                <td>
+                    <input type="radio" name="picant1" value="1">U&#351;or picant<br>
+                    <input type="radio" name="picant1" value="2">Mediu picant<br>
+                    <input type="radio" name="picant1" value="3" checked>Foarte Picant<br>
+                </td>
+                <td><textarea name="extra1" rows="5" cols="30"></textarea></td>
+            </tr>
+
+            <tr  >
+                <td colspan="2"><b>Beef Taco</b><br>(Taco din porumb, pulp&#259; Angus, ardei cop&#355;i, ceap&#259;
+                    caramelizat&#259;, salat&#259;, fasole, br&#226;nz&#259; cheddar - 150g)
+                </td>
+                <td><input type="text" name="cantitate2" size="5"></td>
+                <td>18.00 RON</td>
+                <td>
+                    <input type="radio" name="picant2" value="1">U&#351;or picant<br>
+                    <input type="radio" name="picant2" value="2">Mediu picant<br>
+                    <input type="radio" name="picant2" value="3" checked>Foarte Picant<br>
+                </td>
+                <td><textarea name="extra2" rows="5" cols="30"></textarea></td>
+            </tr>
+            <tr  >
+                <td colspan="2"><b>Vegetarian Taco</b><br>(Taco din porumb, ardei cop&#355;i, ceap&#259; caramelizat&#259;,
+                    salat&#259;, fasole, guacamole, porumb, ro&#351;ii, coriandru, br&#226;nz&#259; cheddar - 150g)
+                </td>
+                <td><input type="text" name="cantitate3" size="5"></td>
+                <td>14.00 RON</td>
+                <td>
+                    <input type="radio" name="picant3" value="1">U&#351;or picant<br>
+                    <input type="radio" name="picant3" value="2">Mediu picant<br>
+                    <input type="radio" name="picant3" value="3" checked>Foarte Picant<br>
+                </td>
+                <td><textarea name="extra3" rows="5" cols="30"></textarea></td>
+            </tr>
+        </table>
+        <br>
+        Alegeti unul sau mai multe sosuri:<br>
+        <select name="cookies" multiple>
+            <option value="1" selected>Salsa</option>
+            <option value="2">Chipotle</option>
+            <option value="3">Guacamole</option>
+            <option value="4">Sweet Chilli</option>
+        </select>
+        <br><br><br>
+        <h3>V&#259; rug&#259;m introduce&#355;i adresa pentru livrare:</h3>
+        <br>
+        <table>
+            <tr>
+                <th colspan="6">Detalii livrare</th>
+            </tr>
+            <tr >
+                <td>Nume:</td>
+                <td><input type="text" name="nume" size="35"></td>
+                <td>Prenume:</td>
+                <td colspan="3"><input type="text" name="prenume" size="35"></td>
+            </tr>
+            <tr >
+                <td>Email:</td>
+                <td><input type="text" name="mail" size="35"></td>
+                <td>Nr telefon:</td>
+                <td colspan="3"><input type="text" name="tel" size="35"></td>
+            </tr>
+            <tr >
+                <td>Oras:</td>
+                <td><input type="text" name="oras" value="Cluj-Napoca" readonly></td>
+                <td>Strada:</td>
+                <td><input type="text" name="strada" size="10"></td>
+                <td>Nr:</td>
+                <td><input type="text" name="nr" size="10"></td>
+            </tr>
+            <tr >
+                <td>Ap:</td>
+                <td><input type="text" name="apartament" size="35"></td>
+                <td>Scara:</td>
+                <td><input type="text" name="scara" size="10"></td>
+                <td>Etaj:</td>
+                <td><input type="text" name="etaj" size="10"></td>
+            </tr>
+            <tr>
+                <td colspan="6" >Salveaza adresa ca: <select name="adresa">
+                    <option value="1">Acasa</option>
+                    <option value="2">Lucru</option>
+                    <option value="3">Altele</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td colspan="6" ><input type="checkbox" name="contactless" value="ok1" checked><b>Doresc
+                    livrare fara contact</b>.
+                </td>
+            </tr>
+        </table>
+        <br>
+    
+    <div>
+        Lista de alergeni:
+        <ol>
+            <li>Cereale conținând gluten</li>
+            <li>Crustacee și produse derivate</li>
+            <li>Ouă și produse derivate</li>
+            <li>Pește și produse derivate</li>
+            <li>Alune și produse derivate</li>
+        </ol>
+    </div>
+    <br><br>
+    
+        <h3>Pentru a continua, v&#259; rug&#259;m introduce&#355;i datele cardului bancar.</h3><br>
+        <table>
+            <tr>
+                <th>Configurarea cardului de credit</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Nume titular:</td>
+                            <td><input type="text" name="titular" size="50"></td>
+                        </tr>
+                        <tr>
+                            <td>Numar card:</td>
+                            <td><input type="text" name="card" size="50" maxlength="19"></td>
+                        </tr>
+                        <tr>
+                            <td>Data expirarii:</td>
+                            <td><input type="text" name="data" size="50"></td>
+                        </tr>
+                        <tr>
+                            <td>Cod de securitate (CVV)</td>
+                            <td><input type="text" name="cvv" size="16" maxlength="3"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        V&#259; mul&#355;umim c&#259; a&#355;i ales restaurantul nostru!
+        <br>
+        Pentru a contacta livratorul suna&#355;i la <input type="text" value="0262 108 529" size="8" disabled><br><br>
+        <input type="submit" value="Comand&#259;">
+    <br>
+    <fieldset>
+        <legend>foodpanda</legend>
+        <ul >
+            <li>Foodpanda iti aduce aproape preparatele tale preferate:
+                <ul >
+                    <li>Ai peste 400 de restaurante și branduri exclusive pentru a-ti potoli foamea.</li>
+                    <li>Livratori pregatiti pentru a-ti livra mancarea proaspata in cel mai scurt timp posibil.</li>
+                    <li>Serviciu de relatii cu clientii prietenos pentru a te ajuta in orice situatie.</li>
+                </ul>
+            </li>
+            <li>Cum sa comanzi mancare online de la cele mai apreciate restaurante din zona ta:
+                <ol type="I" start="1">
+                    <li>Introdu adresa unde doresti sa iti livram mancarea, fie ca esti acasa sau la birou</li>
+                    <li>Selecteaza "Arata restaurante"</li>
+                    <li>Alege restaurantul dorit</li>
+                    <li>Selecteaza preparatele tale si adauga produsele in cosul tau</li>
+                    <li>Selecteaza "Continua la Checkout"</li>
+                    <li>Confirma comanda si introdu detaliile adresei unde doresti livrarea</li>
+                    <li>Plateste si asteapta sa ajunga mancarea</li>
+                </ol>
+            </li>
+        </ul>
+        <br><br>
+    </fieldset>
+    <br><br>
+    <br>
+</form>
+</body>
+</html>

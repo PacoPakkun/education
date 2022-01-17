@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwimModel", "SwimModel\SwimModel.csproj", "{2B2530AE-AB53-4EE9-B5E0-6E8D78565779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwimServer", "SwimServer\SwimServer.csproj", "{E2E7EEFF-DA45-4ED2-BF57-88F67EA81066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwimClient", "SwimClient\SwimClient.csproj", "{B1916846-E1AD-4BB1-86A0-05165CA968BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwimNetwork", "SwimNetwork\SwimNetwork.csproj", "{6FC4D9AB-A866-4761-8A92-A67CC00798AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B2530AE-AB53-4EE9-B5E0-6E8D78565779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2530AE-AB53-4EE9-B5E0-6E8D78565779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2530AE-AB53-4EE9-B5E0-6E8D78565779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2530AE-AB53-4EE9-B5E0-6E8D78565779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E7EEFF-DA45-4ED2-BF57-88F67EA81066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E7EEFF-DA45-4ED2-BF57-88F67EA81066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E7EEFF-DA45-4ED2-BF57-88F67EA81066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E7EEFF-DA45-4ED2-BF57-88F67EA81066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1916846-E1AD-4BB1-86A0-05165CA968BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1916846-E1AD-4BB1-86A0-05165CA968BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1916846-E1AD-4BB1-86A0-05165CA968BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1916846-E1AD-4BB1-86A0-05165CA968BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC4D9AB-A866-4761-8A92-A67CC00798AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC4D9AB-A866-4761-8A92-A67CC00798AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC4D9AB-A866-4761-8A92-A67CC00798AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC4D9AB-A866-4761-8A92-A67CC00798AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

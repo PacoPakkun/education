@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 130px;
+    background-color: lightcoral;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+nav {
+    height: 30px;
+    background-color: palegoldenrod;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    width: 15%;
+    border-left: 2px solid black;
+    padding: 6px 10px 6px 10px;
+}
+
+article {
+    height: 445px;
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+footer {
+    height: 50px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}

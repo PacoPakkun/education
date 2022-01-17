@@ -1,0 +1,25 @@
+.container {
+    width: 400px;
+    display: flex;
+    border-style: solid;
+}
+
+.left {
+    width: 200px;
+    display: inherit;
+    text-align: center;
+    align-items: center;
+}
+
+.right {
+    width: 200px;
+    display: inherit;
+    align-items: center;
+}
+
+.right img{
+    max-width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

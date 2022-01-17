@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+        <class name="domain.Spectacol"
+               table="Spectacole">
+            <id name="id" column="id">
+                <generator class="increment"/>
+            </id>
+            <property
+                    name="nume"
+                    column="nume"/>
+            <property
+                    name="ora"
+                    column="ora"/>
+        </class>
+</hibernate-mapping>

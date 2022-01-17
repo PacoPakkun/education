@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX1</title>
+</head>
+<body>
+<select id="s1" size="10" multiple>
+    <option value="1" id="o1">Alb</option>
+    <option value="2" id="o2">Negru</option>
+    <option value="3" id="o3">Roz</option>
+    <option value="4" id="o4">Mov</option>
+</select>
+<select id="s2" size="10" multiple>
+    <option value="1" id="o5">Albastru</option>
+    <option value="2" id="o6">Verde</option>
+    <option value="3" id="o7">Portocaliu</option>
+    <option value="4" id="o8">Rosu</option>
+</select>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document.body).on('dblclick', 'option' ,function(){
+        if($(this).parent().attr('id')==='s1'){
+            $(this).parent().find(this).remove()
+            $('#s2').append($(this))
+        }
+        else{
+            $(this).parent().find(this).remove()
+            $('#s1').append($(this))
+        }
+    })
+    // function move(id) {
+    //     var item = $(id);
+    //     if (item.parentElement.id === 's1') {
+    //         item.parentNode.removeChild(item);
+    //         document.getElementById('s2').appendChild(item);
+    //     } else {
+    //         item.parentNode.removeChild(item);
+    //         document.getElementById('s1').appendChild(item);
+    //     }
+    // }
+</script>
+</body>
+</html>

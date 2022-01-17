@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="tree"></div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var text = this.responseText;
+            var dirs = text.split(',');
+            for (var i = 0; i < dirs.length; i++) {
+                var lista = document.createElement("ul");
+                lista.id = dirs[i];
+                lista.innerText = dirs[i];
+                lista.addEventListener("click", getFiles);
+                document.getElementById("tree").appendChild(lista);
+            }
+        }
+    }
+    xmlhttp.open("GET", "ex5.php?g=0", true);
+    xmlhttp.send();
+
+
+    function getFiles() {
+        if (this.getElementsByTagName('li').length === 0) {
+            this.style.pointerEvents = "none";
+            var id = this.id;
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    var text = this.responseText;
+                    var dirs = text.split(',');
+                    for (var i = 0; i < dirs.length; i++) {
+                        var listItem = document.createElement("li");
+                        listItem.style.pointerEvents = "auto";
+
+                        listItem.addEventListener("click", displayText);
+                        listItem.innerHTML = dirs[i];
+                        document.getElementById(id).appendChild(listItem);
+                    }
+                }
+            }
+            xmlhttp.open("GET", "ex5.php?g=1&dir=" + this.innerHTML, true);
+            xmlhttp.send();
+        }
+    }
+
+
+    function displayText() {
+        var file = this.innerHTML;
+        $.get("ex5.php?g=2&file=" + file, function (res) {
+            alert(res)
+        })
+    }
+
+</script>
+</html>

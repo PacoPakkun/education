@@ -1,0 +1,23 @@
+td {
+    padding: 10px;
+}
+
+.lung {
+    width: 410px;
+    height: 18px;
+    font-family: "Lucida Console", serif;
+    letter-spacing: 12px;
+    text-indent: 0.15em;
+    background: url("patratici.png");
+    background-size: 400px 40px;
+}
+
+.scurt {
+    width: 270px;
+    height: 18px;
+    font-family: "Lucida Console", serif;
+    letter-spacing: 12px;
+    text-indent: 0.15em;
+    background-image: url("patratici.png");
+    background-size: 400px 40px;
+}

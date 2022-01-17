@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Sgbd1.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../:\UBB\SGBD\Sgbd2\.idea\.idea.Sgbd1\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
