@@ -1,0 +1,42 @@
+﻿.login-component {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.login-component .form {
+    max-width: 330px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.login-component .input {
+    margin-bottom: 10px !important;
+}
+
+.login-component .form .button {
+    margin-top: 30px;
+    width: 50%;
+}
+
+.login-component .form a {
+    color: var(--DARKER_GREY);
+    text-decoration: none;
+}
+
+.login-component .form span {
+    margin-top: 2px;
+    color: var(--RED_ACCENT)
+}
+
+.login-component .textfield {
+    margin-top: 8px !important;
+}
+
+.login-component-spinner-dialog .MuiPaper-root{
+    background-color: transparent !important;
+    box-shadow: none !important;
+}

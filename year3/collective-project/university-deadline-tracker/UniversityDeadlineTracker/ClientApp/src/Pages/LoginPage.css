@@ -1,0 +1,113 @@
+﻿.login-page {
+    font-size: x-large;
+    color: white;
+    width: 40%;
+    margin: 2% auto;
+    text-align: center;
+}
+
+.login-page .hello {
+    font-size: xx-large;
+}
+
+.login-page .orange {
+    color: var(--ORANGE_ACCENT);
+}
+
+.login-page .button {
+    margin: 25px auto;
+    font-size: medium;
+    color: white;
+    width: 180px;
+    height: 55px;
+    line-height: 50px;
+    border: 1px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.login-page .button:hover {
+    background-color: white;
+    border: 1px solid transparent;
+    color: var(--DARKER_GREY);
+}
+
+.login-page .enroll {
+    font-size: large;
+}
+
+.login-page .subject-board {
+    width: 17vw;
+    margin: 25px auto 0;
+    padding-top: 1px;
+    height: 45vh;
+    background-color: var(--LIGHT_GREY);
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.login-page .subject-board .filter {
+    position: absolute;
+    width: 17vw;
+    height: 45vh;
+    border-radius: 5px;
+    background: linear-gradient(transparent, transparent, #101010bb);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.login-page .subject-board .subject {
+    position: relative;
+    width: 80%;
+    height: 60px;
+    margin: 10px auto;
+    background-color: var(--DARKER_GREY);
+    color: white;
+    font-size: medium;
+    text-align: center;
+    border: 1px solid var(--LIGHTER_GREY);
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.login-page .subject-board .subject:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.login-page .subject-board .subject-transition-exit-active {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    transition: all 450ms ease-in-out;
+}
+
+.login-page .subject-board .subject .subject-name {
+    color: var(--ORANGE_ACCENT);
+    transition-duration: .5s;
+    margin-top: 3px;
+}
+
+.login-page .subject-board .subject:hover .subject-name {
+    color: black;
+}
+
+.login-page .subject-board .subject .subject-teacher {
+    font-size: small;
+}
+
+.login-page .subject-board .subject .subject-year {
+    position: absolute;
+    margin: 5px;
+    border: .5px solid var(--DARKEST_GREY);
+    border-radius: 50px;
+    height: 18px;
+    width: 18px;
+    right: 0;
+    font-size: x-small;
+    color: black;
+}

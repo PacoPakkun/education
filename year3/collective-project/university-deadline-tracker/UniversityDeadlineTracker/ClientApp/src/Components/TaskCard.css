@@ -1,0 +1,122 @@
+.slider-component .MuiCard-root {
+    max-width: 230px;
+    max-height: 150px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.slider-component .MuiCardContent-root {
+    min-width: 230px;
+    min-height: 150px;
+    background-color: #a9c7ca;
+    display: flex;
+    flex-direction: column;
+    transition-duration: .7s;
+}
+
+.slider-component .MuiCardContent-root:hover {
+    background-color: #5a6263;
+}
+
+.slider-component .MuiCardContent-root:hover .cardheader {
+    display: none;
+}
+
+.slider-component .MuiCardContent-root:hover .cardfooter {
+    display: none;
+}
+
+.slider-component .MuiCardContent-root:hover .card-description {
+    display: block;
+}
+
+.slider-component .MuiCardContent-root:hover .card-checkbox {
+    display: block !important;
+}
+
+.card-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 116px;
+    transition-duration: 0.7s;
+}
+
+.card-component .cardheader {
+    display: flex;
+}
+
+.card-component .subject-dot {
+    background-color: var(--ORANGE_ACCENT);
+    border-radius: 50%;
+    /*box-shadow: 2px 2px 11px 0 var(--LIGHTER_GREY),*/
+    /*7px 7px 18px -13px var(--DARKEST_GREY) inset;*/
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+.card-component .card-titlee {
+    margin-left: 20px;
+}
+
+.card-component .card-subtitle {
+    margin-left: 20px;
+    font-size: small;
+}
+
+.card-component .cardfooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-component .card-penalty {
+    font-size: 10px;
+    color: var(--DARK_GREY);
+}
+
+.card-component .card-status {
+    font-size: 10px;
+    color: var(--DARK_GREY);
+}
+
+.card-component .card-status-dot {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 5px;
+    height: 8px;
+    width: 8px;
+}
+
+.card-component .card-component:hover {
+    cursor: pointer;
+}
+
+.card-component .card-description {
+    display: none;
+    height: 90px;
+    overflow: hidden;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+}
+
+.card-component .card-checkbox {
+    display: none !important;
+    width: 90px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-component .card-checkbox .MuiTypography-root {
+    font-size: 10px !important;
+    color: white;
+}

@@ -1,0 +1,56 @@
+.slider-component {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.slider-component .date {
+    display: block;
+    font-size: 16px;
+    width: 230px;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+
+.slider-component .dot {
+    display: block;
+    width: 230px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.slider-component .card-list-container {
+    margin-bottom: 50px;
+}
+
+.slider-component .long-arrow {
+    position: absolute;
+    top: 138px;
+    background-color: white;
+    height: 0.7px;
+    width: 82vw;
+}
+
+.slider-component .little-arrow {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    color: white;
+}
+
+.slider-no-tasks {
+    width: 500px;
+    font-size: x-large;
+    color: white;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.slider-no-tasks .orange {
+    color: var(--ORANGE_ACCENT);
+}

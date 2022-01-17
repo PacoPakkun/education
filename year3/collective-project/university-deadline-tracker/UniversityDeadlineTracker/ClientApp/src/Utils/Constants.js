@@ -1,0 +1,7 @@
+﻿export const DARKEST_GREY = '#131313'
+export const DARKER_GREY = '#292929'
+export const DARK_GREY = '#343434'
+export const LIGHT_GREY = '#454545'
+export const LIGHTER_GREY = '#9D9D9D'
+export const ORANGE_ACCENT = '#FF9F60'
+export const RED_ACCENT = '#EA2A3D'

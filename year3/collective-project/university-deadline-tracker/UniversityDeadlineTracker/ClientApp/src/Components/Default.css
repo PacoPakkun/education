@@ -1,0 +1,39 @@
+﻿.default-component {
+    font-size: x-large;
+    color: white;
+    width: 70%;
+    margin: auto auto 50px;
+    text-align: center;
+}
+
+.default-component .bigger {
+    font-size: xx-large;
+}
+
+.default-component .accent {
+    color: var(--ORANGE_ACCENT);
+}
+
+.default-component .button {
+    margin: 50px auto;
+    font-size: medium;
+    color: white;
+    width: 180px;
+    height: 55px;
+    line-height: 50px;
+    border: 1px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.default-component .button:hover {
+    background-color: white;
+    border: none;
+    color: var(--DARKER_GREY);
+}
+
+.default-component ul {
+    margin: 10px 20px 10px 15%;
+    text-align: justify;
+}

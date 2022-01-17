@@ -1,0 +1,173 @@
+﻿header {
+    height: 50px;
+    background-color: var(--DARKER_GREY);
+    color: white;
+}
+
+/*navmenu*/
+
+header .navmenu {
+    float: left;
+    margin-left: 15px;
+}
+
+header .navmenu .logo {
+    height: 50px;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+header .navmenu .title {
+    height: 50px;
+    line-height: 50px;
+    font-size: x-large;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+header .navmenu .title:hover {
+    color: var(--ORANGE_ACCENT);
+}
+
+header .orange {
+    color: var(--ORANGE_ACCENT);
+    transition-duration: .5s;
+}
+
+header .title:hover .orange{
+    color:white;
+}
+
+header .navmenu .link {
+    height: 50px;
+    line-height: 50px;
+    font-weight: 100;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+header .navmenu .selected {
+    height: 50px;
+    line-height: 50px;
+    font-weight: 400;
+    color: white;
+}
+
+header .navmenu .selected:after {
+    content: "";
+    position: relative;
+    display: block;
+    height: .5px;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    top: -22%;
+    width: 100%;
+    left: 0;
+}
+
+header .navmenu .link:hover {
+    color: var(--ORANGE_ACCENT);
+}
+
+header .navmenu .link:after {
+    content: "";
+    position: relative;
+    display: block;
+    height: .5px;
+    background: var(--ORANGE_ACCENT);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    top: -22%;
+    left: 50%;
+}
+
+header .navmenu .link:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/*right*/
+
+header .right {
+    float: right;
+    cursor: pointer;
+    transition-duration: .2s;
+    margin-right: 10px;
+}
+
+header .right:hover {
+    filter: brightness(70%);
+}
+
+header .right .avatar {
+    margin: 20% 0;
+}
+
+header .right .dropdown-icon {
+    height: 50px;
+    line-height: 50px;
+}
+
+/* dropdown */
+
+.dropdown .MuiPaper-root {
+    background-color: transparent !important;
+}
+
+.dropdown .MuiMenu-list {
+    background-color: var(--DARKER_GREY);
+    border-radius: 5px;
+    border: .2px solid var(--LIGHT_GREY);
+}
+
+.dropdown .dropdown-logged-user {
+    background-color: var(--DARKER_GREY) !important;
+    flex-direction: column;
+    cursor: auto !important;
+    color: var(--LIGHTER_GREY) !important;
+}
+
+.dropdown .dropdown-logged-user p {
+    margin: 0 !important;
+}
+
+.dropdown .name {
+    color: var(--ORANGE_ACCENT);
+    transition-duration: .5s;
+}
+
+.dropdown .MuiDivider-root {
+    background-color: var(--LIGHT_GREY);
+}
+
+.dropdown .dropdown-item {
+    background-color: var(--DARKER_GREY) !important;
+    height: 30px !important;
+    transition-duration: .5s !important;
+    color: var(--LIGHTER_GREY) !important;
+}
+
+.dropdown .dropdown-item:hover {
+    background-color: var(--DARK_GREY) !important;
+    color: white !important;
+}
+
+.dropdown .dropdown-item:hover .icon {
+    color: white !important;
+}
+
+.dropdown .logout {
+    background-color: var(--DARKER_GREY) !important;
+    height: 30px !important;
+    transition-duration: .5s !important;
+    color: var(--LIGHTER_GREY) !important;
+}
+
+.dropdown .logout:hover {
+    background-color: var(--DARK_GREY) !important;
+    color: var(--RED_ACCENT) !important;
+}
+
+.dropdown .logout:hover .logout-icon {
+    color: var(--RED_ACCENT);
+}

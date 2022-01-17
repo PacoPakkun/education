@@ -1,0 +1,14 @@
+﻿@import './Utils/Constants.css';
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--DARKEST_GREY);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

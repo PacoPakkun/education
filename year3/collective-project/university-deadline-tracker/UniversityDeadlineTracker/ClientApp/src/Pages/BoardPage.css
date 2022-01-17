@@ -1,0 +1,13 @@
+﻿.board-page {
+    margin: 30px auto;
+    width: 90vw;
+    height: 80%;
+    background-color: var(--DARK_GREY);
+    border-radius: 10px;
+}
+
+.board-spinner {
+    width: 100px;
+    margin: 15% auto;
+    text-align: center;
+}
