@@ -1,0 +1,43 @@
+0 1 2 3 4 5 6 7 8 9 + - .
+p q r s
+r r r r r r r r r r q q -1 0
+r r r r r r r r r r -1 -1 -1 0
+r r r r r r r r r r -1 -1 s 1
+s s s s s s s s s s -1 -1 -1 1
+
+a
+p q r
+q 0
+r 0
+q 1
+
+a b c
+p q r s
+q -1 -1 -1 0
+-1 r -1 -1 0
+-1 -1 s -1 0
+q -1 -1 -1 1
+
+0 1
+p q r
+q p 0
+r p 0
+r r 1
+
+<fisier> -> <alfabet>
+	    <stari>
+	    <tranzitii_stari_finale>
+
+<alfabet> -> <lista_caractere>
+<lista_caractere> -> <caracter> | <lista_caractere>
+<caracter> -> a|b|...|z|A|B|...|Z|0|1|...|9|+|-
+
+<stari> -> <lista_stari>
+<lista_stari> -> <stare> | <lista_stari>
+<stare> -> a|b|...|z|-1
+
+<tranzitii_stari_finale> -> <lista_tranzitii>
+<lista_tranzitii> -> <tranzitie> | <lista_tranzitii>
+<tranzitie> -> <lista_stari> <stare_finala>
+<stare_finala> -> 0|1
+

@@ -1,0 +1,12 @@
+Automat Finit
+	alfabet: Set<Char>
+	tranzitii: List<Tranzitie>
+	stari: Set<Char>
+	stare_initiala: Char
+	stari_finale: Set<Char>
+
+Tranzitie
+	stare_plecare: Char
+	valoare: Char
+	stare_destinatie: Char
+	

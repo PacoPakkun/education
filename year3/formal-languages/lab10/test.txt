@@ -1,0 +1,11 @@
+
+        int main ( )
+        {
+            int perimet ; 
+	    int ok ;
+	    cin >> ok;	   
+	    ok = ok +10;
+	    perimet = ok;
+	    cout << perimet;
+	}
+

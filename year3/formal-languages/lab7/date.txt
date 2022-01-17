@@ -1,0 +1,22 @@
+void main(){
+	float r = 0;
+	float p = 0;
+	float a = 0;
+	read(r);
+	switch(r){
+		case 1:
+			r=r*4;
+			break;
+		case 2:
+			r=rrr_r+2;
+			break;
+		default:
+			r=r+1;
+	}
+	p = r * 2;
+	p = p * 3.14;
+	a = r * r;
+	a = a * 3.14;
+	print(p);
+	print(a);
+}

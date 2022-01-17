@@ -1,0 +1,37 @@
+0 1 2 3 4 5 6 7 8 9 + - . x b a c d e f u l
+p q r s t u v w x
+t r r r r r r r r r q q -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0
+t r r r r r r r r r -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0
+r r r r r r r r r r -1 -1 s -1 -1 -1 -1 -1 -1 -1 x x 1
+s s s s s s s s s s -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1
+w w w w w w w w -1 -1 -1 -1 -1 u v -1 -1 -1 -1 -1 -1 -1 1
+u u u u u u u u u u -1 -1 -1 -1 u u u u u u -1 -1 1
+v v -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1
+w w w w w w w w -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1
+
+p: stare initiala
+q: +-
+r: intregi
+s: zecimale
+t: 0
+u: hex
+v: binar
+w: octal
+x: unsigned/long
+
+// https://en.cppreference.com/w/cpp/language/types
+
+<constanta> -> <operator> <numar> | <numar>
+<operator> -> + | -
+<numar> -> <lista_cifre_float> | 0x<lista_cifre_hex> | 0b<lista_cifre_binar> | 0<lista_cifre_octa>
+<lista_cifre_float> -> <lista_cifre> | <lista_cifre><sufix> | <lista_cifre>.<lista_cifre>
+<lista_cifre> -> <cifra> | <lista_cifre>
+<cifra> -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<lista_cifre_hex> -> <cifra_hex> | <lista_cifre_hex>
+<cifra_hex> -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | a | b | c | d | e | f
+<lista_cifre_binar> -> <cifra_binar> | <lista_cifre_binar>
+<cifra_binar> -> 0 | 1
+<lista_cifre_octa> -> <cifra_octa> | <lista_cifre_octa>
+<cifra_octa> -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+<sufix> -> u | l

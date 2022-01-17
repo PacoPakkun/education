@@ -1,0 +1,36 @@
+Tracker filme si seriale
+
+	Descriere:
+Aplicatie mobila destinata utilizatorilor Android, prin intermediul careia acestia sa isi poata monitoriza filmele vizionate si progresul urmaririi serialelor. In acest scop, utilizatorii pot rasfoi o lista cu cele mai noi filme si seriale aparute, pe care le pot adauga la favorite. User-ul poate marca statusul lor (vizionat sau nu), progresul episoadelor/sezoanelor sau chiar sa le acorde un calificativ. Mai mult, utilizatorul poate reveni oricand asupra lor pentru a le modifica sau elimina. Exista si o categorie speciala de utilizatori logati ca administratori, care pot gestiona toate filmele disponibile (adaugari, modificari, eliminari).
+
+---------------
+
+	Entitati:
+Film		
+-titlu: string
+-an: int
+-regizor: string
+-nota: float
+-serial: bool
+-nr episoade: int
+
+Utilizator
+-username: string
+-email: string
+-parola: string
+-administrator: bool
+
+FilmUtilizator (many to many)
+-status: string
+-progres: int
+-nota: float
+
+	Operatii CRUD:
+Orice utilizator se poate loga in cont (read user), poate vizualiza toate filmele disponibile (read film) si poate gestiona filmele favorite (create, read, update, delete film_user).
+Un utilizator logat ca admin poate adauga un film nou cu toate detaliile aferente (create film), poate modifica anumite campuri ale filmelor existente (update film) sau poate elimina filme dintre cele existente (delete film).
+
+	Persistenta:
+Informatiile asociate entitatilor vor fi retinute intr-o baza de date stocata pe server, si vor fi preluate pe back-end. Acestea vor fi facute disponibile local utilizatorilor prin intermediul unor servicii REST ce vor rula pe server (GET, POST, PUT, DELETE). Un utilizator va interactiona cu componenta front-end a aplicatiei pe mobil, si va face request-uri serverului pentru a vizualiza cele mai noi date despre filmele existente.
+
+	Offline:
+Cand utilizatorul nu are acces la internet, acesta isi poate vizualiza doar lista de filme favorite dar nu poate face modificari. Un user logat ca admin nu isi poate salva modificarile.

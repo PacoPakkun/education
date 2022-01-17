@@ -1,0 +1,11 @@
+Buna, suntem echipa Sheet3 din grupa G5 a proiectului colectiv si urmeaza sa va prezentam modificarile aduse pentru al 2lea demo.
+
+Am inceput cu o refactorizare a bazei de date, de care aveam nevoie pentru a restructura si imbunatati flow-ul aplicatiei si pentru a dispune de mai multe date utile pentru entitatile folosite. Am adaugat call-uri noi pe partea de back-end, pentru a putea adauga noi functionalitati in aplicatie. De asemenea, am modificat felul in care se realizeaza autentificarea, care foloseste acum un token generat la login care ramane valabil pentru 30min.
+
+Ca functionalitati principale adaugate, am pregatit o pagina de sign up prin care un utilizator isi poate crea un cont nou. Datele introduse sunt validate, dupa care se face logarea in noul cont. Pentru ca un utilizator nou sa poata urmari task-urile asociate unei materii, acesta poate face enroll la materiile sugerate pe pagina principala.
+
+In plus, am actualizat aspecte de design si UI/UX ale aplicatiei, printre care felul in care sunt afisate task-urile pe board. Un card include acum mai multe informatii relevante, afisate intr-o maniera user friendly: Titlul laboratorului, materia de care apartine, penalizarea pe saptamana si statusul sau. La hover, utilizatorul poate citi o descriere a assignment-ului, si poate sa o marcheze ca completata.
+
+Noua structura a bazei de date permite adaugarea de roluri si permisiuni (de exemplu pentru studenti si profesori), urmand ca aceste modificari sa fie vizibile in curand si in aplicatie (un profesor va putea sa adauge/modifice task-uri la materia pe care o preda). Printre alte imbunatatiri pe care le planuim se numara si o comunitate de studenti, un sistem de contact al profesorilor pentru informatii si un sistem de reminder prin email.
+
+Multumim si va uram o zi frumoasa!

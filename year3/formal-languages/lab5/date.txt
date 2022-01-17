@@ -1,0 +1,13 @@
+void main(){
+	float roboabcd = 0;
+	float cri$ = 0;
+	float fghui_ = 0;
+	read(r);
+	p = r*0x567ff;
+	p = p*0b10101;
+	a = r*r;
+	a = a*4567u;
+	a = a*4567l;
+	print(p);
+	print(a);
+}

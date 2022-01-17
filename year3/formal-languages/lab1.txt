@@ -1,0 +1,90 @@
+<program> 		-> void main(){ <lista_instr> }
+<lista_instr> 		-> <instr> | <lista_instr>
+<instr>			-> <citire> | <scriere> | <operatie> | <conditionala> | <repetitie_fixa> | <repetitie_variabila> | <declarare>
+<citire>		-> read(ID);
+<scriere>		-> print(ID);
+<operatie>		-> ID = ID <operator> ID; | ID = ID <operator> CONST;
+<operator> 		-> + | - | *
+<conditionala>		-> if ( <conditie> ){ <lista_instr> } else { <lista_instr> } | if ( <conditie> ){ <lista_instr> }
+<conditie>		-> ID <operator_relational> ID | ID <operator_relational> CONST
+<operator_relational>	-> < | > | = | <= | >= | !=
+<repetitie_fixa>	-> for (<declarare> <conditie>; <pas>){ <lista_instr> }
+<declarare>		-> <tip> ID = CONST;
+<tip>			-> int | bool | string | float
+<pas>			-> ID <operator><operator>
+<repetitie_variabila>	-> while ( <conditie> ){ <lista_instr> }
+
+ID	: [a-zA-Z]
+CONST	: int | bool | string | float
+
+------------------------
+
+# prog 1 perimetru si aria cerc
+void main(){
+	float r = 0;
+	float p = 0;
+	float a = 0;
+	read(r);
+	p = r*2;
+	p = p*3.14;
+	a = r*r;
+	a = a*3.14;
+	print(p);
+	print(a);
+}
+
+# prog 2 cmmdc
+void main(){
+	int a = 0;
+	int b = 0;
+	read(a);
+	read(b);
+	while (a!=b){
+		if (a>b){
+			a = a-b;
+		}
+		else{
+			b = b-a;
+		}
+	}
+	print(a);
+}
+
+# prog 3 suma n numere
+void main(){
+	int n = 0;
+	read(n);
+	int suma = 0;
+	for (int i=0; i<n; i++){
+		int x = 0;
+		read(x);
+		suma = suma+x;
+	}
+	print(suma);
+}
+
+------------------------
+
+# prog erori limbaj original
+void main(){
+	int x = 0;
+	int y = 0;
+	read x
+	read y
+	if x<y print x
+	else print y
+}
+
+# prog erori mlp
+void main(){
+	int x = 0;
+	int y = 0;
+	read(x);	
+	read(y);
+	while (true){
+		if (x>y)
+			break;
+		x+=y;
+	}
+	print(x);
+}

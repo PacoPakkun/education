@@ -1,0 +1,42 @@
+%{
+#include "bison.tab.h"
+%}
+
+%option noyywrap
+
+%%
+"void" {return void_token;}
+"main" {return main_token;}
+"read" {return read_token;}
+"print" {return print_token;}
+"if" {return if_token;}
+"else" {return else_token;}
+"for" {return for_token;}
+"while" {return while_token;}
+"int" {return int_token;}
+"bool" {return bool_token;}
+"string" {return string_token;}
+"float" {return float_token;}
+"switch" {return switch_token;}
+"case" {return case_token;}
+"break" {return break_token;}
+"default" {return default_token;}
+"=" {return '=';}
+"+" {return '+';}
+"-" {return '-';}
+"*" {return '*';}
+"<" {return '<';}
+">" {return '>';}
+"<=" {return lte_token;}
+">=" {return gte_token;}
+"!=" {return ne_token;}
+"(" {return '(';}
+")" {return ')';}
+"{" {return '{';}
+"}" {return '}';}
+";" {return ';';}
+[+-]?([0-9]*[.])?[0-9]+ {return const_token;}
+[a-zA-Z]{1,8} {return id_token;}
+[ \n\t]	 {}
+. {return 0;}
+%%

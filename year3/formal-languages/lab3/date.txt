@@ -1,0 +1,12 @@
+void main(){
+	float r = 0;
+	float p = 0;
+	float a = 0;
+	read(r);
+	p = r*2;
+	p = p*3.14;
+	a = r*r;
+	a = a*3.14;
+	print(p);
+	print(a);
+}

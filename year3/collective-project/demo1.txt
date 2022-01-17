@@ -1,0 +1,11 @@
+Salut, noi suntem echipa Sheet3 din grupa 5 a proiectului colectiv. Proiectul pe care am ales sa il construim este o aplicatie destinata studentilor si cadrelor didactice, pentru a isi putea urmari mai usor temele de laborator, proiectele si termenele de predare. Aplicatia ofera o interfata interactiva, prin care utilizatorii pot vizualiza un timeline al task-urilor asignate lor de catre profesori sau adaugate chiar de ei. Acest tool face gestionarea volumului de lucru si a timpului mai usoara si imbunatateste gradul de comunicare intre studenti si profesori referitor la temele propuse, mai ales in mediul online.
+
+Utilizatorii vor intra in aplicatie, unde se pot loga sau inregistra pentru a accesa functionalitatile oferite. De pe pagina principala putem naviga catre restul paginilor prin navigation menu-ul din partea de sus a paginii.
+
+Pe board-ul principal se vor incarca de pe server toate task-urile viitoare si incomplete asociate utilizatorului logat, afisate sub forma unui slider si organizate cronologic in fucntie de deadline. Informatiile preluate includ titlul laboratorului, o scurta descriere si materia aferenta.
+
+Pentru a vizualiza toate task-urile, indiferent de statusul lor (fie ca sunt active sau completed), utilizatorul poate accesa pagina de Backlog ce contine informatiile despre intregul sau istoric.
+
+Ca viitoare imbunatatiri, dorim sa oferim posibilitatea personalizarii contului de pe pagini de profil/setari, cat si accesarea altor pagini pentru functionalitati (de exemplu o zona de community in care studentii pot discuta despre temele lor sau pot pune intrebari profesorilor).
+
+In continuare vom trece peste metoda de implementare aleasa si tehnologiile folosite. Persistenta aplicatiei a fost realizata in SQL Server, iar baza de date a fost generata folosind un tool de Entity Framework din .Net. Am folosit o arhitectura stratificata, care include un proiect de modele, un repository, si un service. Fiecare entitate are asociat un Controller unde sunt implementate serviciile Rest pentru metodele CRUD. Componenta front-end a fost construita in Javascript folosind React. Datele necesare sunt preluate in componentele fiecarei pagini folosind call-uri ajax, si afisate structurat in componente stilizate prin CSS.

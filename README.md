@@ -94,6 +94,40 @@ My work as a computer science student @Babes Bolyai University of Cluj-Napoca
       </li>
     </ul>
   </li>
+  <li>:open_file_folder: Semester 5
+    <ul>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/mobile-applications"> 
+          :santa:  Mobile Applications
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/parallel-programming"> 
+          :outbox_tray:  Parallel Programming
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/formal-languages"> 
+          :nut_and_bolt:  Formal Languages
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/audio-video-processing"> 
+          :floppy_disk:  Audio Video Processing
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/collective-project"> 
+          :floppy_disk:  Collective Project
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/PacoPakkun/education/tree/main/year2/virtual-reality"> 
+          :floppy_disk:  Virtual Reality
+        </a>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <br>
