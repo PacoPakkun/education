@@ -1,6 +1,6 @@
 # UBB
 
-My work as a computer science student @Babes Bolyai University of Cluj-Napoca
+My work as a computer science student @ Babes Bolyai University of Cluj-Napoca
 
 <ul>
   <li>:open_file_folder: Semester 1
